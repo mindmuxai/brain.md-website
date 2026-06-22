@@ -325,9 +325,9 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   color: var(--paper);
   border: 1px solid transparent;
   border-radius: var(--radius-full);
-  padding: 0 20px;
-  height: 40px;
-  font-size: 14px;
+  padding: 0 24px;
+  height: 48px;
+  font-size: 16px;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
@@ -463,13 +463,12 @@ html.dark .dark-toggle .icon-sun  { display: none; }
 .hero-icon {
   width: 96px;
   height: 96px;
-  background: var(--chip);
-  border: 1px solid var(--gray-alpha-400);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .hero-title {
