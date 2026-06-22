@@ -772,6 +772,15 @@ footer {
   color: var(--muted);
 }
 
+.footer-meta a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-meta a:hover { color: var(--ink); }
+
+
 .footer-right {
   display: flex;
   align-items: center;
