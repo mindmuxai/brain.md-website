@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRAIN.md — The Open Project Brain Format</title>
-<meta name="description" content="A portable, version-controlled Markdown format that stores decision-grade knowledge for AI agents and humans alike.">
+<title>BRAIN.md — The Open Project Brain Standard</title>
+<meta name="description" content="An open standard for capturing project knowledge as plain Markdown, plus an install-first, agent-agnostic toolkit. Every read and write goes through one zero-dependency CLI — no service, no MCP server.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css" rel="stylesheet">
@@ -22,10 +22,10 @@
 
     <h1 class="hero-title"><code>BRAIN.md</code></h1>
     <p class="hero-desc">
-      A portable, version-controlled Markdown format that stores
-      decision-grade knowledge for AI agents and humans alike —
-      architecture decisions, rationale, tradeoffs, and roadmap,
-      ready to read without special tooling.
+      The Open Project Brain Standard — an open spec for capturing
+      decision-grade project knowledge as plain Markdown, plus an
+      install-first, agent-agnostic toolkit. Every read and write goes
+      through one zero-dependency CLI. No service, no MCP server, no lock-in.
     </p>
 
     <div class="hero-actions">
@@ -44,20 +44,22 @@
       <div class="mock-dot"></div>
       <div class="mock-dot"></div>
       <div class="mock-dot"></div>
-      <span class="mock-filename">brain/ — pages/welcome.md</span>
+      <span class="mock-filename">my-project/ — brain/pages/db-choice.md</span>
     </div>
     <div class="mock-body">
       <div class="mock-tree">
-        brain/<br>
-        <span class="indent">├── <span class="active">index.md</span></span><br>
-        <span class="indent">├── background.md</span><br>
-        <span class="indent">├── architecture.md</span><br>
-        <span class="indent">├── flow.md</span><br>
-        <span class="indent">├── mindmap.md</span><br>
-        <span class="indent">├── stack.md</span><br>
-        <span class="indent">├── roadmap.md</span><br>
-        <span class="indent">└── pages/</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="active">welcome.md</span></span>
+        my-project/<br>
+        <span class="indent">├── <span class="active">BRAIN.md</span></span><br>
+        <span class="indent">└── brain/</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── index.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── background.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── architecture.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── flow.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── mindmap.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── stack.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── roadmap.md</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span><br>
+        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="active">db-choice.md</span></span>
       </div>
       <div class="mock-content">
 <span class="mc-fm">---</span><br>
@@ -66,22 +68,21 @@
 <span class="mc-key">category:</span> <span class="mc-val">decision</span><br>
 <span class="mc-key">status:</span>   <span class="mc-val">active</span><br>
 <span class="mc-key">tags:</span>     <span class="mc-val">[storage, infra]</span><br>
-<span class="mc-key">created:</span>  <span class="mc-val">"2024-10-15"</span><br>
-<span class="mc-key">updated:</span>  <span class="mc-val">"2024-11-02T14:30"</span><br>
+<span class="mc-key">created:</span>  <span class="mc-val">"2026-06-22"</span><br>
+<span class="mc-key">updated:</span>  <span class="mc-val">"2026-06-22T14:30"</span><br>
 <span class="mc-fm">---</span><br>
 <br>
 <span class="mc-sec">## compiled_truth</span><br>
 <span class="mc-body">Use PostgreSQL. SQLite ruled out for multi-writer prod workload.</span><br>
 <span class="mc-body">MongoDB rejected — relational joins are load-bearing for reporting.</span><br>
-<span class="mc-body">See [architecture](mindmux:wiki/architecture) for data layer context.</span><br>
+<span class="mc-body">See [[architecture]] for data-layer context.</span><br>
 <br>
 <span class="mc-sec">## timeline</span><br>
-<span class="mc-dim">- time: 2024-11-02T14:30</span><br>
+<span class="mc-dim">- time: 2026-06-22T14:30</span><br>
 <span class="mc-dim">&nbsp;&nbsp;kind: decision</span><br>
 <span class="mc-dim">&nbsp;&nbsp;summary: Chose Postgres after eval of three options</span><br>
-<span class="mc-dim">&nbsp;&nbsp;source: https://example.com/db-eval</span><br>
-<span class="mc-dim">&nbsp;&nbsp;affects: [architecture, stack]</span><br>
-<span class="mc-dim">&nbsp;&nbsp;evidence: "SQLite WAL mode still serializes writes under load"</span>
+<span class="mc-dim">&nbsp;&nbsp;source: internal-db-eval</span><br>
+<span class="mc-dim">&nbsp;&nbsp;affects: [architecture, stack]</span>
       </div>
     </div>
   </div>
@@ -103,8 +104,13 @@
         A project brain stores <strong>decision-grade knowledge</strong> —
         conclusions that have been reviewed, structured, and are authoritative enough
         to guide downstream reasoning and code generation.
-        It lives in a <code class="inline">brain/</code> folder, ships with your repo,
-        and needs no special parser.
+        It lives in a <code class="inline">brain/</code> folder and ships with your repo.
+      </p>
+      <p class="section-body">
+        A single <code class="inline">BRAIN.md</code> at the project root is the
+        protocol entry point: any coding agent that reads it knows how to work with
+        the brain. No runtime service, no MCP server — just plain-file conventions
+        plus one zero-dependency CLI.
       </p>
     </div>
 
@@ -128,6 +134,11 @@
             <td>AI coding agents</td>
             <td>How to work <em>on</em> this codebase</td>
           </tr>
+          <tr>
+            <td>BRAIN.md</td>
+            <td>Any coding agent</td>
+            <td>Protocol entry point — how to read &amp; write the brain</td>
+          </tr>
           <tr class="highlight">
             <td>brain/</td>
             <td>AI reasoning agents + humans</td>
@@ -146,14 +157,18 @@
   <p class="section-label">Structure</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading">Six root views.<br>Unlimited knowledge pages.</h2>
+      <h2 class="section-heading">Six root pages.<br>Unlimited knowledge pages.</h2>
       <p class="section-body">
-        Root pages represent the six project-wide views — background, architecture,
-        data flow, feature space, stack decisions, and roadmap. Rewrite them freely;
-        history lives in git.
+        Six fixed root pages cover the project-wide views — background, architecture,
+        flow, mindmap, stack, and roadmap. They are only ever updated, never created,
+        and carry no timeline: their history lives in git. Lean on
+        <code class="inline">mermaid</code> diagrams to make them visual.
       </p>
       <p class="section-body mb-6">
-        <code class="inline">pages/*.md</code> are granular, append-safe knowledge units.
+        <code class="inline">pages/*.md</code> are granular, append-safe knowledge units
+        in one of five categories — <code class="inline">decision</code>,
+        <code class="inline">concept</code>, <code class="inline">project</code>,
+        <code class="inline">person</code>, <code class="inline">reference</code>.
         Each tracks the current best understanding (<code class="inline">compiled_truth</code>)
         and the full evidence chain (<code class="inline">timeline</code>).
       </p>
@@ -167,6 +182,14 @@
           architecture.md — system shape &amp; modules
         </div>
         <div class="badge">
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="3" cy="8" r="1.5"/><circle cx="13" cy="4" r="1.5"/><circle cx="13" cy="12" r="1.5"/><line x1="4.3" y1="7.3" x2="11.7" y2="4.5"/><line x1="4.3" y1="8.7" x2="11.7" y2="11.5"/></svg>
+          flow.md — key end-to-end flows
+        </div>
+        <div class="badge">
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2"/><circle cx="3" cy="3" r="1.5"/><circle cx="13" cy="3" r="1.5"/><circle cx="3" cy="13" r="1.5"/><circle cx="13" cy="13" r="1.5"/><line x1="6.5" y1="6.5" x2="4" y2="4"/><line x1="9.5" y1="6.5" x2="12" y2="4"/><line x1="6.5" y1="9.5" x2="4" y2="12"/><line x1="9.5" y1="9.5" x2="12" y2="12"/></svg>
+          mindmap.md — feature mindmap
+        </div>
+        <div class="badge">
           <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,4 10,8 14,4"/></svg>
           stack.md — technology choices &amp; rationale
         </div>
@@ -178,16 +201,19 @@
     </div>
 
     <div class="code-block">
-<span class="cm">brain/</span>
-├── <span class="kw">index.md</span>          <span class="cm">← entry point</span>
-├── background.md
-├── architecture.md
-├── flow.md
-├── mindmap.md
-├── stack.md
-├── roadmap.md
-└── pages/
-    └── <span class="str">welcome.md</span>
+<span class="cm">my-project/</span>
+├── <span class="kw">BRAIN.md</span>           <span class="cm">← protocol entry point</span>
+└── <span class="cm">brain/</span>
+    ├── index.md         <span class="cm">← generated by reindex</span>
+    ├── background.md
+    ├── architecture.md
+    ├── flow.md
+    ├── mindmap.md
+    ├── stack.md
+    ├── roadmap.md
+    └── pages/
+        ├── <span class="str">db-choice.md</span>
+        └── <span class="str">auth-strategy.md</span>
     </div>
   </div>
 </div>
@@ -207,21 +233,22 @@
       </p>
       <p class="section-body">
         The <strong>timeline</strong> is
-        append-only evidence. When a conclusion changes, add a
+        append-only evidence. When a conclusion changes, append a
         <code class="inline">reversal</code> entry — the old truth stays in the record.
       </p>
       <p class="section-body">
-        Timeline event kinds: <code class="inline">decision</code>,
-        <code class="inline">observation</code>,
-        <code class="inline">source</code>,
-        <code class="inline">reversal</code>.
+        Timeline entry kinds: <code class="inline">decision</code>,
+        <code class="inline">evidence</code>,
+        <code class="inline">reversal</code>,
+        <code class="inline">note</code>. Rewriting a <code class="inline">compiled_truth</code>
+        and appending its <code class="inline">decision</code> entry happen in one
+        atomic write — you cannot do one without the other.
       </p>
       <p class="section-body">
-        Cross-references use the syntax
-        <code class="inline">[page-id](mindmux:wiki/page-id)</code>
+        Cross-references use wiki-link syntax
+        <code class="inline">[[page-id]]</code>
         where <code class="inline">page-id</code> matches the frontmatter <code class="inline">id</code> field exactly.
-        Root pages are referenced by filename without extension:
-        <code class="inline">architecture</code>, <code class="inline">stack</code>, etc.
+        Run <code class="inline">brain lint-links</code> to confirm every link resolves.
       </p>
     </div>
 
@@ -233,23 +260,21 @@
 <span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
 <span class="fm-key">category:</span> <span class="fm-val">decision</span>
 <span class="fm-key">status:</span>   <span class="fm-val">active</span>
-<span class="fm-key">created:</span>  <span class="fm-val">"2024-09-10"</span>
-<span class="fm-key">updated:</span>  <span class="fm-val">"2024-12-01T09:15"</span>
+<span class="fm-key">created:</span>  <span class="fm-val">"2026-06-10"</span>
+<span class="fm-key">updated:</span>  <span class="fm-val">"2026-06-20T09:15"</span>
 <span class="fm-comment">---</span>
 &nbsp;
 <span class="fm-sec">## compiled_truth</span>
 <span class="fm-body-text">Use JWT with short-lived access tokens.</span>
 <span class="fm-body-text">Session cookies ruled out for API-first</span>
-<span class="fm-body-text">clients. See</span>
-<span class="fm-body-text">[api-versioning](mindmux:wiki/api-versioning).</span>
+<span class="fm-body-text">clients. See [[api-versioning]].</span>
 &nbsp;
 <span class="fm-sec">## timeline</span>
-<span class="fm-comment">- time: 2024-12-01T09:15</span>
+<span class="fm-comment">- time: 2026-06-20T09:15</span>
 <span class="fm-comment">  kind: reversal</span>
 <span class="fm-comment">  summary: Dropped OAuth — scope creep</span>
-<span class="fm-comment">  source: internal-review-2024-12</span>
+<span class="fm-comment">  source: internal-review-2026-06</span>
 <span class="fm-comment">  affects: [auth-strategy, stack]</span>
-<span class="fm-comment">  evidence: "OAuth adds 3 external deps"</span>
       </div>
     </div>
   </div>
@@ -266,28 +291,25 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="prompt">$</span> <span class="hi">cat brain/pages/auth.md</span><br>
-        <span class="dim">---</span><br>
-        <span class="hi">id: auth-strategy</span><br>
-        <span class="hi">category: decision</span><br>
-        <span class="dim">---</span><br>
-        <span class="hi">## compiled_truth</span><br>
-        Use JWT…
+        <span class="dim"># no service, no MCP server</span><br>
+        <span class="dim"># no npm install</span><br>
+        <br>
+        <span class="prompt">$</span> <span class="hi">node brain.mjs ls</span><br>
+        <span class="dim">runs on plain Node — zero deps</span>
       </div>
-      <div class="feat-card-title">Plain Markdown</div>
-      <div class="feat-card-desc">No binary dependencies, no database, no build step. Read with any text editor, grep, or AI file tool.</div>
+      <div class="feat-card-title">Zero Dependencies</div>
+      <div class="feat-card-desc">No background service, no MCP server, no install step. One zero-dependency reference CLI, run with <code class="inline">node</code>. The brain ships in your repo.</div>
     </div>
 
     <div class="feat-card">
       <div class="feat-card-media">
-        1. Read <span class="hi">BRAIN.md</span><br>
-        2. Read <span class="hi">background.md</span><br>
-        3. Filter <span class="hi">pages/</span> by category<br>
-        4. Follow <span class="hi">[arch](mindmux:wiki/arch)</span><br>
-        5. Check <span class="hi">timeline</span> for reversals
+        <span class="prompt">$</span> <span class="hi">brain update-truth --id db-choice</span><br>
+        <span class="dim">↳ rewrites compiled_truth</span><br>
+        <span class="dim">↳ appends timeline entry</span><br>
+        <span class="dim">  …in one atomic write</span>
       </div>
-      <div class="feat-card-title">Agent Loading Protocol</div>
-      <div class="feat-card-desc">Designed around a defined loading order. Agents read the entry point, then fetch pages on demand — no bulk loading needed.</div>
+      <div class="feat-card-title">Correct by Construction</div>
+      <div class="feat-card-desc">Every read and write goes through the <code class="inline">brain</code> CLI. Mis-shaped frontmatter and trace-less truth rewrites are structurally impossible — so there is no validator to run.</div>
     </div>
 
     <div class="feat-card">
@@ -295,7 +317,7 @@
         <span class="dim">$ git log --oneline brain/</span><br>
         <span class="hi">a3f1c4b</span> decision: chose postgres<br>
         <span class="hi">8d22e01</span> reversal: dropped redis<br>
-        <span class="hi">f90b3aa</span> observation: p99 spike<br>
+        <span class="hi">f90b3aa</span> evidence: p99 spike<br>
         <span class="dim">…</span>
       </div>
       <div class="feat-card-title">Git-Native</div>
@@ -305,13 +327,13 @@
     <div class="feat-card">
       <div class="feat-card-media">
         <span class="dim"># architecture.md references:</span><br>
-        <span class="hi">[db-choice](mindmux:wiki/db-choice)</span><br>
-        <span class="hi">[auth-strategy](mindmux:wiki/auth-strategy)</span><br>
+        <span class="hi">[[db-choice]]</span><br>
+        <span class="hi">[[auth-strategy]]</span><br>
         <br>
-        <span class="dim"># agent follows on demand</span>
+        <span class="dim">$ brain lint-links ✓</span>
       </div>
-      <div class="feat-card-title">Cross-References</div>
-      <div class="feat-card-desc">Pages link with <code class="inline">[page-id](mindmux:wiki/page-id)</code> syntax. IDs match frontmatter exactly. Agents follow links on demand.</div>
+      <div class="feat-card-title">Wiki-Link Cross-Refs</div>
+      <div class="feat-card-desc">Pages link with <code class="inline">[[page-id]]</code> syntax. IDs match frontmatter exactly, and <code class="inline">lint-links</code> confirms every reference resolves.</div>
     </div>
 
     <div class="feat-card">
@@ -329,15 +351,14 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim">brain_spec: "0.1"</span><br>
+        <span class="hi">Claude Code</span> · <span class="hi">Codex</span><br>
+        any agent that reads files<br>
         <br>
-        <span class="hi">MindMux</span> · Claude Code<br>
-        <span class="hi">Codex</span> · Cursor · any agent<br>
-        <br>
-        <span class="dim">No vendor lock-in</span>
+        <span class="dim">4 installable skills,</span><br>
+        <span class="dim">shared across agents</span>
       </div>
-      <div class="feat-card-title">Open Spec</div>
-      <div class="feat-card-desc">An open format. Any tool can read or write brain files. The spec is versioned in <code class="inline">BRAIN.md</code> frontmatter.</div>
+      <div class="feat-card-title">Agent-Agnostic</div>
+      <div class="feat-card-desc">An open standard with neutral naming. Four skills install once and work with Claude Code, Codex, and any file-reading agent. No vendor lock-in.</div>
     </div>
 
   </div>
@@ -345,48 +366,51 @@
 
 <hr class="divider">
 
-<!-- ── Agent protocol section ── -->
+<!-- ── Toolkit / CLI section ── -->
 <div class="section">
-  <p class="section-label">Agent Loading Protocol</p>
+  <p class="section-label">The Toolkit</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading">Structured context<br>for any coding agent.</h2>
+      <h2 class="section-heading">Install once.<br>Brain in any project.</h2>
       <p class="section-body">
-        When a coding agent starts on a project with a <code class="inline">brain/</code>
-        folder, it follows a defined loading protocol: read entry point, load relevant
-        root pages, filter <code class="inline">pages/</code> by category and tags,
-        follow cross-references on demand.
+        This is an install-first toolkit, not a brain itself. Run
+        <code class="inline">./setup</code> once to symlink the skills into every
+        detected agent — <code class="inline">~/.claude/skills</code>,
+        <code class="inline">~/.codex/skills</code>, and more.
+      </p>
+      <p class="section-body">
+        Then run <code class="inline">brain-setup</code> in any project: it scaffolds
+        <code class="inline">BRAIN.md</code> and the <code class="inline">brain/</code>
+        skeleton, and wires <code class="inline">CLAUDE.md</code> /
+        <code class="inline">AGENTS.md</code> to the protocol.
+        <code class="inline">brain-bootstrap</code> then seeds real knowledge from
+        your code, docs, and <code class="inline">git log</code> — or an interview.
       </p>
       <p class="section-body mb-6">
-        The brain tool (e.g. MindMux) can assemble a structured context package —
-        task intent, constraints, rejected options, and acceptance criteria —
-        and inject it before execution begins.
-      </p>
-      <p class="section-body">
-        Works with Claude Code, Codex, Cursor, and any agent that can read files.
+        Four skills do the work: <code class="inline">brain-setup</code>,
+        <code class="inline">brain-bootstrap</code>,
+        <code class="inline">brain-page</code> (carries the CLI), and
+        <code class="inline">brain-ingest</code>.
       </p>
     </div>
 
     <div class="code-block">
-<span class="kw">brain_context:</span>
-  <span class="cm">task_intent:</span> <span class="str">"Add payment flow"</span>
-  <span class="cm">root_pages:</span>
-    - architecture.md
-    - stack.md
-  <span class="cm">pages:</span>
-    - id: <span class="str">auth-strategy</span>
-      section: compiled_truth
-    - id: <span class="str">api-versioning</span>
-      section: compiled_truth
-  <span class="cm">constraints:</span>
-    - <span class="str">"Use existing Postgres instance"</span>
-    - <span class="str">"No new external auth providers"</span>
-  <span class="cm">rejected_options:</span>
-    - <span class="str">"Stripe Checkout (too opinionated)"</span>
-  <span class="cm">open_questions:</span>
-    - <span class="str">"Webhook idempotency strategy TBD"</span>
-  <span class="cm">acceptance_criteria:</span>
-    - <span class="str">"Idempotent webhook handling"</span>
+<span class="cm"># 1. install the tools once (global)</span>
+<span class="kw">./setup</span>
+
+<span class="cm"># 2. scaffold + seed inside a project</span>
+brain-setup
+brain-bootstrap
+
+<span class="cm"># 3. read &amp; write only through the CLI</span>
+brain <span class="str">ls</span>
+brain <span class="str">cat</span> db-choice
+brain <span class="str">create-page</span> --id db-choice \
+  --category decision --title <span class="str">"Use Postgres"</span>
+echo <span class="str">"the new understanding"</span> \
+  | brain <span class="str">update-truth</span> --id db-choice \
+      --summary <span class="str">"why it changed"</span>
+brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span>
     </div>
   </div>
 </div>
@@ -397,9 +421,10 @@
     <p class="section-label">Get Started</p>
     <h2 class="section-heading">Give your AI agents a brain.</h2>
     <p class="section-body mb-8">
-      Read the spec, create a <code class="inline">brain/</code> folder in your repo,
-      and start writing. Or use MindMux to generate and manage your project brain
-      with AI assistance.
+      Clone the toolkit, run <code class="inline">./setup</code> once, then
+      <code class="inline">brain-setup</code> in any project. Your coding agent
+      reads <code class="inline">BRAIN.md</code> and takes it from there — no
+      service, no MCP server, no lock-in.
     </p>
     <div class="hero-actions">
       <a href="http://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
