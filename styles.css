@@ -921,6 +921,45 @@ code.inline {
   overflow-x: auto;
 }
 
+/* Screen reader only helper for SEO / Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ── FAQ Section Style ── */
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-q {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+
+.faq-a {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .divider     { margin: 0 16px; }
@@ -935,6 +974,7 @@ code.inline {
   .hero-title  { font-size: 32px; letter-spacing: -1.28px; line-height: 40px; }
   .hero-title code  { font-size: 30px; }
   .section-heading  { font-size: 20px; letter-spacing: -0.4px; line-height: 26px; }
+  .faq-list    { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (max-width: 900px) {
