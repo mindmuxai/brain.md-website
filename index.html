@@ -68,7 +68,7 @@
 <span class="mc-key">category:</span> <span class="mc-val">decision</span><br>
 <span class="mc-key">status:</span>   <span class="mc-val">active</span><br>
 <span class="mc-key">tags:</span>     <span class="mc-val">[storage, infra]</span><br>
-<span class="mc-key">created:</span>  <span class="mc-val">"2026-06-22"</span><br>
+<span class="mc-key">created:</span>  <span class="mc-val">"2026-06-22T09:00"</span><br>
 <span class="mc-key">updated:</span>  <span class="mc-val">"2026-06-22T14:30"</span><br>
 <span class="mc-fm">---</span><br>
 <br>
@@ -239,7 +239,7 @@
 <span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
 <span class="fm-key">category:</span> <span class="fm-val">decision</span>
 <span class="fm-key">status:</span>   <span class="fm-val">active</span>
-<span class="fm-key">created:</span>  <span class="fm-val">"2026-06-10"</span>
+<span class="fm-key">created:</span>  <span class="fm-val">"2026-06-10T11:20"</span>
 <span class="fm-key">updated:</span>  <span class="fm-val">"2026-06-20T09:15"</span>
 <span class="fm-comment">---</span>
 &nbsp;
@@ -394,24 +394,53 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
 
 <!-- ── CTA ── -->
 <div class="cta-wrap">
-<div class="cta-block">
-  <div class="cta-inner">
     <p class="section-label">Get Started</p>
     <h2 class="section-heading">Give your AI agents a brain.</h2>
-    <p class="section-body mb-8">
-      Clone the toolkit, run <code class="inline">./setup</code> once, then
-      <code class="inline">brain-setup</code> in any project. Your coding agent
-      reads <code class="inline">BRAIN.md</code> and takes it from there — no
-      service, no MCP server, no lock-in.
-    </p>
-    <div class="hero-actions">
-      <a href="https://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        GitHub
-      </a>
+    <div class="steps-grid" style="text-align:left;margin-top:24px;">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Clone the toolkit</div>
+          <div class="step-desc">Download once — the toolkit lives on your machine, not inside any single project.</div>
+          <div class="step-code"><span class="prompt">$</span> <span class="hi">git clone https://github.com/mindmuxai/brain.md</span>
+<span class="prompt">$</span> <span class="hi">cd brain.md</span></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Install globally</div>
+          <div class="step-desc">Symlinks the four skills into every detected agent — Claude Code, Codex, and any compatible agent.</div>
+          <div class="step-code"><span class="prompt">$</span> <span class="hi">./setup</span>
+<span class="dim">→ installed 4 skills into ~/.claude/skills</span>
+<span class="dim">→ installed 4 skills into ~/.codex/skills</span></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Scaffold a project brain</div>
+          <div class="step-desc">Open your project in your coding agent and run the setup skill. It creates <code class="inline">BRAIN.md</code> and the <code class="inline">brain/</code> skeleton.</div>
+          <div class="step-code"><span class="dim"># In your coding agent (Claude Code, Codex…)</span>
+<span class="prompt">/</span><span class="hi">brain-setup</span></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Seed knowledge</div>
+          <div class="step-desc">Bootstrap reads your code, docs, and git log to fill the brain with real decisions — or runs an interview to capture them.</div>
+          <div class="step-code"><span class="prompt">/</span><span class="hi">brain-bootstrap</span>
+<span class="dim">→ reads code + git log</span>
+<span class="dim">→ writes structured pages into brain/</span></div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
 </div>
 
 <!-- ── Footer ── -->
