@@ -29,7 +29,7 @@
     </p>
 
     <div class="hero-actions">
-      <a href="http://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub
       </a>
@@ -44,7 +44,7 @@
       <div class="mock-dot"></div>
       <div class="mock-dot"></div>
       <div class="mock-dot"></div>
-      <span class="mock-filename">my-project/ — brain/pages/db-choice.md</span>
+      <span class="mock-filename">my-project/brain/pages/db-choice.md</span>
     </div>
     <div class="mock-body">
       <div class="mock-tree">
@@ -75,7 +75,7 @@
 <span class="mc-sec">## compiled_truth</span><br>
 <span class="mc-body">Use PostgreSQL. SQLite ruled out for multi-writer prod workload.</span><br>
 <span class="mc-body">MongoDB rejected — relational joins are load-bearing for reporting.</span><br>
-<span class="mc-body">See [[architecture]] for data-layer context.</span><br>
+<span class="mc-body">See architecture.md for data-layer context.</span><br>
 <br>
 <span class="mc-sec">## timeline</span><br>
 <span class="mc-dim">- time: 2026-06-22T14:30</span><br>
@@ -150,7 +150,6 @@
   </div>
 </div>
 
-<hr class="divider">
 
 <!-- ── Structure section ── -->
 <div class="section">
@@ -164,7 +163,7 @@
         and carry no timeline: their history lives in git. Lean on
         <code class="inline">mermaid</code> diagrams to make them visual.
       </p>
-      <p class="section-body mb-6">
+      <p class="section-body">
         <code class="inline">pages/*.md</code> are granular, append-safe knowledge units
         in one of five categories — <code class="inline">decision</code>,
         <code class="inline">concept</code>, <code class="inline">project</code>,
@@ -172,53 +171,24 @@
         Each tracks the current best understanding (<code class="inline">compiled_truth</code>)
         and the full evidence chain (<code class="inline">timeline</code>).
       </p>
-      <div class="badge-list">
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 4h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4Z"/><path d="M5 4V2h6v2"/></svg>
-          background.md — why this project exists
-        </div>
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>
-          architecture.md — system shape &amp; modules
-        </div>
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="3" cy="8" r="1.5"/><circle cx="13" cy="4" r="1.5"/><circle cx="13" cy="12" r="1.5"/><line x1="4.3" y1="7.3" x2="11.7" y2="4.5"/><line x1="4.3" y1="8.7" x2="11.7" y2="11.5"/></svg>
-          flow.md — key end-to-end flows
-        </div>
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2"/><circle cx="3" cy="3" r="1.5"/><circle cx="13" cy="3" r="1.5"/><circle cx="3" cy="13" r="1.5"/><circle cx="13" cy="13" r="1.5"/><line x1="6.5" y1="6.5" x2="4" y2="4"/><line x1="9.5" y1="6.5" x2="12" y2="4"/><line x1="6.5" y1="9.5" x2="4" y2="12"/><line x1="9.5" y1="9.5" x2="12" y2="12"/></svg>
-          mindmap.md — feature mindmap
-        </div>
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,4 10,8 14,4"/></svg>
-          stack.md — technology choices &amp; rationale
-        </div>
-        <div class="badge">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><line x1="8" y1="8" x2="11" y2="10"/></svg>
-          roadmap.md — milestones &amp; sequencing
-        </div>
-      </div>
     </div>
 
-    <div class="code-block">
-<span class="cm">my-project/</span>
-├── <span class="kw">BRAIN.md</span>           <span class="cm">← protocol entry point</span>
+    <div class="code-block"><span class="cm">my-project/</span>
+├── <span class="kw">BRAIN.md</span>             <span class="cm">← protocol entry point</span>
 └── <span class="cm">brain/</span>
     ├── index.md         <span class="cm">← generated by reindex</span>
-    ├── background.md
-    ├── architecture.md
-    ├── flow.md
-    ├── mindmap.md
-    ├── stack.md
-    ├── roadmap.md
+    ├── background.md    <span class="cm">← why this project exists</span>
+    ├── architecture.md  <span class="cm">← system shape &amp; modules</span>
+    ├── flow.md          <span class="cm">← key end-to-end flows</span>
+    ├── mindmap.md       <span class="cm">← feature mindmap</span>
+    ├── stack.md         <span class="cm">← technology choices</span>
+    ├── roadmap.md       <span class="cm">← milestones &amp; sequencing</span>
     └── pages/
         ├── <span class="str">db-choice.md</span>
-        └── <span class="str">auth-strategy.md</span>
-    </div>
+        └── <span class="str">auth-strategy.md</span></div>
   </div>
 </div>
 
-<hr class="divider">
 
 <!-- ── Page format section ── -->
 <div class="section">
@@ -233,8 +203,9 @@
       </p>
       <p class="section-body">
         The <strong>timeline</strong> is
-        append-only evidence. When a conclusion changes, append a
-        <code class="inline">reversal</code> entry — the old truth stays in the record.
+        append-only evidence. When a conclusion changes, <code class="inline">update-truth</code>
+        atomically rewrites <code class="inline">compiled_truth</code> and appends a
+        <code class="inline">decision</code> entry. The old truth stays in the record.
       </p>
       <p class="section-body">
         Timeline entry kinds: <code class="inline">decision</code>,
@@ -254,8 +225,7 @@
 
     <div class="frontmatter-block">
       <div class="fm-header">pages/auth-strategy.md</div>
-      <div class="fm-body">
-<span class="fm-comment">---</span>
+      <div class="fm-body"><span class="fm-comment">---</span>
 <span class="fm-key">id:</span>       <span class="fm-val">auth-strategy</span>
 <span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
 <span class="fm-key">category:</span> <span class="fm-val">decision</span>
@@ -274,13 +244,11 @@
 <span class="fm-comment">  kind: reversal</span>
 <span class="fm-comment">  summary: Dropped OAuth — scope creep</span>
 <span class="fm-comment">  source: internal-review-2026-06</span>
-<span class="fm-comment">  affects: [auth-strategy, stack]</span>
-      </div>
+<span class="fm-comment">  affects: [auth-strategy, stack]</span></div>
     </div>
   </div>
 </div>
 
-<hr class="divider">
 
 <!-- ── Feature cards ── -->
 <div class="section">
@@ -298,7 +266,7 @@
         <span class="dim">runs on plain Node — zero deps</span>
       </div>
       <div class="feat-card-title">Zero Dependencies</div>
-      <div class="feat-card-desc">No background service, no MCP server, no install step. One zero-dependency reference CLI, run with <code class="inline">node</code>. The brain ships in your repo.</div>
+      <div class="feat-card-desc">No npm install, no runtime service, no background daemon. One zero-dependency reference CLI, run with <code class="inline">node</code>. The brain ships in your repo.</div>
     </div>
 
     <div class="feat-card">
@@ -364,7 +332,6 @@
   </div>
 </div>
 
-<hr class="divider">
 
 <!-- ── Toolkit / CLI section ── -->
 <div class="section">
@@ -375,8 +342,9 @@
       <p class="section-body">
         This is an install-first toolkit, not a brain itself. Run
         <code class="inline">./setup</code> once to symlink the skills into every
-        detected agent — <code class="inline">~/.claude/skills</code>,
-        <code class="inline">~/.codex/skills</code>, and more.
+        detected agent — currently Claude Code
+        (<code class="inline">~/.claude/skills</code>) and Codex
+        (<code class="inline">~/.codex/skills</code>).
       </p>
       <p class="section-body">
         Then run <code class="inline">brain-setup</code> in any project: it scaffolds
@@ -394,13 +362,12 @@
       </p>
     </div>
 
-    <div class="code-block">
-<span class="cm"># 1. install the tools once (global)</span>
+    <div class="code-block"><span class="cm"># 1. install the tools once (global)</span>
 <span class="kw">./setup</span>
 
-<span class="cm"># 2. scaffold + seed inside a project</span>
-brain-setup
-brain-bootstrap
+<span class="cm"># 2. ask your agent to run the skills</span>
+<span class="cm"># /brain-setup  → scaffolds BRAIN.md + brain/</span>
+<span class="cm"># /brain-bootstrap → seeds from code + git</span>
 
 <span class="cm"># 3. read &amp; write only through the CLI</span>
 brain <span class="str">ls</span>
@@ -410,12 +377,12 @@ brain <span class="str">create-page</span> --id db-choice \
 echo <span class="str">"the new understanding"</span> \
   | brain <span class="str">update-truth</span> --id db-choice \
       --summary <span class="str">"why it changed"</span>
-brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span>
-    </div>
+brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span></div>
   </div>
 </div>
 
 <!-- ── CTA ── -->
+<div class="cta-wrap">
 <div class="cta-block">
   <div class="cta-inner">
     <p class="section-label">Get Started</p>
@@ -427,12 +394,13 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
       service, no MCP server, no lock-in.
     </p>
     <div class="hero-actions">
-      <a href="http://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
+      <a href="https://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub
       </a>
     </div>
   </div>
+</div>
 </div>
 
 <!-- ── Footer ── -->
@@ -442,7 +410,7 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
     <span class="footer-meta">maintained by the MindMux team. Inspired by <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki</a> and <a href="https://github.com/garrytan/gbrain" target="_blank" rel="noopener">GBrain</a>.</span>
   </div>
   <div class="footer-right">
-    <a href="http://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
     <a href="https://mindmux.app" class="footer-link" target="_blank" rel="noopener">MindMux</a>
     <button class="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode">
       <svg class="icon-sun" width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
