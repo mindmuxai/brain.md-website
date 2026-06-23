@@ -308,7 +308,6 @@
       <div class="feat-card-media">
         <span class="dim">## compiled_truth</span><br>
         <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
-        <br>
         <span class="dim">NOT a raw note dump</span><br>
         <span class="dim">NOT a vector index</span><br>
         <span class="hi">Authoritative decisions only</span>
@@ -369,7 +368,10 @@
 <span class="cm"># /brain-setup  → scaffolds BRAIN.md + brain/</span>
 <span class="cm"># /brain-bootstrap → seeds from code + git</span>
 
-<span class="cm"># 3. read &amp; write only through the CLI</span>
+<span class="cm"># 3. wire the brain CLI</span>
+brain() { node skills/brain-page/bin/brain.mjs <span class="str">"$@"</span>; }
+
+<span class="cm"># 4. read &amp; write only through the CLI</span>
 brain <span class="str">ls</span>
 brain <span class="str">cat</span> db-choice
 brain <span class="str">create-page</span> --id db-choice \

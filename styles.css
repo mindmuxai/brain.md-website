@@ -594,12 +594,12 @@ html.dark .hero-icon {
 .mock-tree   { color: #888; border-right-color: #2a2a2a; }
 .mock-tree .active { color: #e0e0e0; }
 .mock-content { background: #141414; }
-.mc-fm   { color: #777; opacity: 1; }
-.mc-key  { color: #aaa; }
-.mc-val  { color: #d0d0d0; }
-.mc-sec  { color: #e0e0e0; }
-.mc-body { color: #bbb; opacity: 1; }
-.mc-dim  { color: #777; opacity: 1; }
+.mc-fm   { color: #666; opacity: 1; }
+.mc-key  { color: #79c0ff; }
+.mc-val  { color: #7ee787; }
+.mc-sec  { color: #d2a8ff; }
+.mc-body { color: #cdd9e5; opacity: 1; }
+.mc-dim  { color: #666; opacity: 1; }
 
 /* ── Comparison table ── */
 .compare-table {
@@ -657,9 +657,9 @@ html.dark .hero-icon {
   box-shadow: var(--shadow-raised);
 }
 
-.code-block .cm  { color: #777; }
-.code-block .kw  { color: #e0e0e0; font-weight: 500; }
-.code-block .str { color: #aaa; }
+.code-block .cm  { color: #666; }
+.code-block .kw  { color: #79c0ff; font-weight: 500; }
+.code-block .str { color: #7ee787; }
 
 /* ── Two-column layout ── */
 .two-col {
@@ -689,10 +689,10 @@ html.dark .hero-icon {
   padding: 10px 12px;
   margin-bottom: 16px;
   font-family: 'Geist Mono', 'SF Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.65;
   color: #888;
-  height: 108px;
+  height: 120px;
   overflow: hidden;
 }
 
@@ -744,11 +744,11 @@ html.dark .hero-icon {
   overflow-x: auto;
 }
 
-.fm-key       { color: #aaa; }
-.fm-val       { color: #d0d0d0; }
-.fm-sec       { color: #e0e0e0; font-weight: 600; display: block; margin-top: 2px; }
-.fm-comment   { color: #777; opacity: 1; }
-.fm-body-text { color: #bbb; opacity: 1; }
+.fm-key       { color: #79c0ff; }
+.fm-val       { color: #7ee787; }
+.fm-sec       { color: #d2a8ff; font-weight: 600; display: block; margin-top: 2px; }
+.fm-comment   { color: #666; opacity: 1; }
+.fm-body-text { color: #cdd9e5; opacity: 1; }
 
 /* ── Section ── */
 .section {
