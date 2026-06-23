@@ -287,12 +287,12 @@ body {
 
 /* ── Dark toggle ── */
 .dark-toggle {
-  background: var(--gray-100);
+  background: var(--background-100);
   border: 1px solid var(--gray-alpha-400);
   border-radius: var(--radius-full);
   padding: 5px 10px;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--ink);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
@@ -693,6 +693,14 @@ html.dark .hero-icon {
   color: #888;
   height: 120px;
   overflow: hidden;
+}
+
+html.dark .feat-card {
+  background: var(--gray-300);
+}
+
+html.dark .feat-card-media {
+  background: var(--background-100);
 }
 
 .feat-card-media .hi  { color: #d0d0d0; }
