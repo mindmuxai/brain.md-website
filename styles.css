@@ -117,7 +117,7 @@
   /* ── Semantic aliases ── */
   --paper: var(--background-100);
   --ink: var(--gray-1000);
-  --muted: var(--gray-700);
+  --muted: var(--gray-800);
   --chip: var(--gray-100);
   --border: var(--gray-200);
   --hover: var(--gray-100);
@@ -490,7 +490,7 @@ html.dark .hero-icon {
 }
 
 .hero-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 24px;
   margin-bottom: 32px;
@@ -895,14 +895,14 @@ code.inline {
 }
 
 .step-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.2px;
 }
 
 .step-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
 }
