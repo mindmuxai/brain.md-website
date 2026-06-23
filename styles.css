@@ -117,7 +117,7 @@
   /* ── Semantic aliases ── */
   --paper: var(--background-100);
   --ink: var(--gray-1000);
-  --muted: var(--gray-700);
+  --muted: var(--gray-800);
   --chip: var(--gray-100);
   --border: var(--gray-200);
   --hover: var(--gray-100);
