@@ -541,36 +541,35 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
 </section>
 
 <!-- ── FAQ Section ── -->
-<hr class="divider">
 <section class="section" aria-labelledby="faq-heading">
   <p class="section-label">FAQ</p>
   <h2 class="section-heading" id="faq-heading">Frequently Asked Questions</h2>
   
   <div class="faq-list">
-    <div class="faq-item">
-      <h3 class="faq-q">What is BRAIN.md?</h3>
+    <details class="faq-item">
+      <summary class="faq-q">What is BRAIN.md?</summary>
       <p class="faq-a">
         BRAIN.md is a plain-file convention for storing project knowledge in a repository. It gives agents and humans a predictable place to find decisions, rationale, constraints, and current project context.
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">How is BRAIN.md different from README.md or AGENTS.md?</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">How is BRAIN.md different from README.md or AGENTS.md?</summary>
       <p class="faq-a">
         <code class="inline">README.md</code> usually explains how to understand or use a project. <code class="inline">AGENTS.md</code> usually tells coding agents how to work in the repository. <code class="inline">BRAIN.md</code> points to the project brain: structured knowledge about why decisions were made, what is currently true, and what context should guide future work.
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">How is BRAIN.md different from MCP?</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">How is BRAIN.md different from MCP?</summary>
       <p class="faq-a">
         MCP is a protocol integration layer for connecting tools and context providers to AI applications. BRAIN.md is not a runtime protocol. It is a repository-local Markdown convention plus a small CLI, so the project knowledge remains readable, reviewable, and versioned in git.
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">Why does it separate compiled_truth and timeline?</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Why does it separate compiled_truth and timeline?</summary>
       <p class="faq-a">
         <code class="inline">compiled_truth</code> records the current best understanding of a topic. <code class="inline">timeline</code> records the evidence, decisions, reversals, and notes that led there. The split lets agents read the current answer quickly while preserving the reasoning history when they need to audit it.
       </p>
-    </div>
+    </details>
   </div>
 </section>
 </main>
