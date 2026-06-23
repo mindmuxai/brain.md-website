@@ -417,7 +417,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   letter-spacing: 0.06em;
   color: var(--muted);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .section-heading {
@@ -426,7 +426,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   letter-spacing: -0.96px;
   line-height: 32px;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .section-body {
@@ -458,7 +458,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   margin: 0 auto;
 }
 
-.hero-inner { max-width: 540px; }
+.hero-inner { max-width: 456px; }
 
 .hero-icon {
   width: 96px;
@@ -494,7 +494,6 @@ html.dark .hero-icon {
   color: var(--muted);
   line-height: 24px;
   margin-bottom: 32px;
-  max-width: 460px;
 }
 
 .hero-actions {
@@ -507,7 +506,7 @@ html.dark .hero-icon {
 /* ── Hero visual anchor ── */
 .hero-visual {
   max-width: 1040px;
-  margin: 48px auto 0;
+  margin: 48px auto 80px;
   padding: 0 40px;
 }
 
@@ -621,7 +620,7 @@ html.dark .hero-icon {
 }
 
 .compare-table td {
-  padding: 11px 16px 11px 0;
+  padding: 12px 16px 12px 0;
   border-bottom: 1px solid var(--border);
   color: var(--ink);
   vertical-align: top;
@@ -646,7 +645,7 @@ html.dark .hero-icon {
 .code-block {
   background: #141414;
   border: 1px solid #2a2a2a;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   padding: 20px 24px;
   font-family: 'Geist Mono', 'SF Mono', monospace;
   font-size: 13px;
@@ -678,7 +677,7 @@ html.dark .hero-icon {
 
 .feat-card {
   background: var(--chip);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   padding: 16px;
   overflow: hidden;
 }
@@ -718,7 +717,7 @@ html.dark .hero-icon {
 .frontmatter-block {
   background: #141414;
   border: 1px solid #2a2a2a;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-raised);
 }
