@@ -400,7 +400,6 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   padding: 3px 10px;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.01em;
   width: fit-content;
 }
 
@@ -414,7 +413,6 @@ html.dark .dark-toggle .icon-sun  { display: none; }
 .section-label {
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.06em;
   color: var(--muted);
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -422,10 +420,10 @@ html.dark .dark-toggle .icon-sun  { display: none; }
 
 .section-heading {
   font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.96px;
+  font-weight: 700;
   line-height: 32px;
   color: var(--ink);
+  letter-spacing: -1px; 
   margin-bottom: 24px;
 }
 
@@ -458,7 +456,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   margin: 0 auto;
 }
 
-.hero-inner { max-width: 456px; }
+.hero-inner { max-width: 640px; }
 
 .hero-icon {
   width: 96px;
@@ -477,8 +475,8 @@ html.dark .hero-icon {
 
 .hero-title {
   font-size: 40px;
-  font-weight: 600;
-  letter-spacing: -2.4px;
+  font-weight: 700;
+  letter-spacing: -2px;
   line-height: 48px;
   color: var(--ink);
   margin-bottom: 16px;
@@ -572,7 +570,7 @@ html.dark .hero-icon {
 .mc-fm   { color: var(--muted); opacity: 0.55; }
 .mc-key  { color: var(--muted); }
 .mc-val  { color: var(--ink); }
-.mc-sec  { color: var(--ink); font-weight: 600; margin-top: 2px; display: block; }
+.mc-sec  { color: var(--ink); font-weight: 700; margin-top: 2px; display: block; }
 .mc-body { color: var(--ink); opacity: 0.75; }
 .mc-dim  { color: var(--muted); opacity: 0.55; }
 
@@ -612,7 +610,6 @@ html.dark .hero-icon {
   text-align: left;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
   padding: 8px 16px 8px 0;
@@ -709,8 +706,7 @@ html.dark .feat-card-media {
 
 .feat-card-title {
   font-size: 14px;
-  font-weight: 600;
-  letter-spacing: -0.28px;
+  font-weight: 700;
   color: var(--ink);
   margin-bottom: 4px;
 }
@@ -737,7 +733,6 @@ html.dark .feat-card-media {
   font-size: 12px;
   font-weight: 500;
   color: #999;
-  letter-spacing: 0.02em;
   background: #1a1a1a;
 }
 
@@ -753,7 +748,7 @@ html.dark .feat-card-media {
 
 .fm-key       { color: #79c0ff; }
 .fm-val       { color: #7ee787; }
-.fm-sec       { color: #d2a8ff; font-weight: 600; display: block; margin-top: 2px; }
+.fm-sec       { color: #d2a8ff; font-weight: 700; display: block; margin-top: 2px; }
 .fm-comment   { color: #666; opacity: 1; }
 .fm-body-text { color: #cdd9e5; opacity: 1; }
 
@@ -879,7 +874,7 @@ code.inline {
   background: var(--gray-1000);
   color: var(--background-100);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -896,9 +891,8 @@ code.inline {
 
 .step-title {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.2px;
 }
 
 .step-desc {
@@ -950,11 +944,10 @@ code.inline {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 20px 0;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--ink);
-  letter-spacing: -0.2px;
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -965,7 +958,7 @@ code.inline {
 .faq-q::after {
   content: '+';
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--muted);
   flex-shrink: 0;
   transition: transform 0.2s ease;
@@ -993,9 +986,9 @@ code.inline {
   footer       { padding: 24px 16px; }
   .two-col     { grid-template-columns: 1fr; gap: 32px; }
   .steps-grid  { grid-template-columns: 1fr; }
-  .hero-title  { font-size: 32px; letter-spacing: -1.28px; line-height: 40px; }
+  .hero-title  { font-size: 32px; line-height: 40px; }
   .hero-title code  { font-size: 30px; }
-  .section-heading  { font-size: 20px; letter-spacing: -0.4px; line-height: 26px; }
+  .section-heading  { font-size: 20px; line-height: 26px; }
 
 }
 
