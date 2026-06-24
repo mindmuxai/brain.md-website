@@ -548,30 +548,30 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
   <h2 class="section-heading" id="faq-heading">常见问题</h2>
   
   <div class="faq-list">
-    <div class="faq-item">
-      <h3 class="faq-q">BRAIN.md 是什么？</h3>
+    <details class="faq-item">
+      <summary class="faq-q">BRAIN.md 是什么？</summary>
       <p class="faq-a">
         BRAIN.md 是一种在仓库中存储项目知识的普通文件约定。它为代理和人类提供一个可预测的位置，用来查找决策、理由、约束和当前项目上下文。
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">BRAIN.md 与 README.md 或 AGENTS.md 有什么不同？</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">BRAIN.md 与 README.md 或 AGENTS.md 有什么不同？</summary>
       <p class="faq-a">
         <code class="inline">README.md</code> 通常说明如何理解或使用一个项目。<code class="inline">AGENTS.md</code> 通常告诉编码代理如何在仓库中工作。<code class="inline">BRAIN.md</code> 指向项目大脑：关于决策原因、当前事实和未来工作上下文的结构化知识。
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">BRAIN.md 与 MCP 有什么不同？</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">BRAIN.md 与 MCP 有什么不同？</summary>
       <p class="faq-a">
         MCP 是把工具和上下文提供方连接到 AI 应用的协议集成层。BRAIN.md 不是运行时协议，而是仓库本地的 Markdown 约定加一个小型 CLI，让项目知识保持可读、可审查，并由 git 版本化。
       </p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-q">为什么要分离 compiled_truth 和 timeline？</h3>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">为什么要分离 compiled_truth 和 timeline？</summary>
       <p class="faq-a">
         <code class="inline">compiled_truth</code> 记录某个主题当前最可靠的理解。<code class="inline">timeline</code> 记录形成该理解的证据、决策、反转和备注。二者分离后，代理可以快速读取当前答案，同时在需要审计时保留推理历史。
       </p>
-    </div>
+    </details>
   </div>
 </section>
 </main>
