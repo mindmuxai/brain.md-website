@@ -508,8 +508,7 @@ html.dark .hero-icon {
 }
 
 .tree-body {
-  padding: 16px 20px;
-  line-height: 1.7;
+  line-height: 1.6;
   white-space: pre;
   overflow-x: auto;
   color: #888;
@@ -564,7 +563,7 @@ html.dark .hero-icon {
 .code-block {
   background: #141414;
   border: 1px solid #2a2a2a;
-  padding: 20px 24px;
+  padding: 16px;
   line-height: 1.7;
   color: #bbb;
   overflow-x: auto;
@@ -913,6 +912,11 @@ code.inline {
   gap: 10px;
 }
 
+.ui-window--terminal .tree-body,
+.ui-window--terminal .fm-body {
+  display: block;
+}
+
 .terminal-line {
   display: flex;
   gap: 8px;
@@ -942,4 +946,3 @@ code.inline {
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
-
