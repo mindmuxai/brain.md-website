@@ -511,7 +511,7 @@ html.dark .hero-icon {
   line-height: 1.6;
   white-space: pre;
   overflow-x: auto;
-  color: var(--window-muted);
+  color: var(--window-text);
 }
 
 .tree-body .indent { padding-left: 0; }
