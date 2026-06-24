@@ -509,7 +509,7 @@ html.dark .hero-icon {
 
 .tree-body {
   padding: 16px 20px;
-  line-height: 1.7;
+  line-height: 1.6;
   white-space: pre;
   overflow-x: auto;
   color: #888;
@@ -913,6 +913,11 @@ code.inline {
   gap: 10px;
 }
 
+.ui-window--terminal .tree-body,
+.ui-window--terminal .fm-body {
+  display: block;
+}
+
 .terminal-line {
   display: flex;
   gap: 8px;
@@ -942,4 +947,3 @@ code.inline {
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
-
