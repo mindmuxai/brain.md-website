@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRAIN.md — 开放项目大脑标准</title>
-<meta name="description" content="为项目提供持久记忆层：一套 BRAIN.md 协议和安装优先、代理无关的工具集，用普通 Markdown 在仓库中记录项目的持久决策、需求和约束。">
+<title>BRAIN.md — 为你的项目提供持久记忆层</title>
+<meta name="description" content="开放、代理无关的项目知识标准，用普通 Markdown 记录项目的持久决策——通过一个轻量 CLI 读写，随仓库一起走，跨代理、跨机器、跨模型。">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -14,13 +14,13 @@
 <link rel="alternate" hreflang="x-default" href="https://projectbrain.md/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BRAIN.md">
-<meta property="og:title" content="BRAIN.md — 开放项目大脑标准">
-<meta property="og:description" content="为项目提供持久记忆层：一套 BRAIN.md 协议和安装优先、代理无关的工具集，用普通 Markdown 在仓库中记录项目的持久决策、需求和约束。">
+<meta property="og:title" content="BRAIN.md — 为你的项目提供持久记忆层">
+<meta property="og:description" content="开放、代理无关的项目知识标准，用普通 Markdown 记录项目的持久决策——通过一个轻量 CLI 读写，随仓库一起走，跨代理、跨机器、跨模型。">
 <meta property="og:url" content="https://projectbrain.md/zh/">
 <meta property="og:image" content="https://projectbrain.md/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BRAIN.md — 开放项目大脑标准">
-<meta name="twitter:description" content="为项目提供持久记忆层：一套 BRAIN.md 协议和安装优先、代理无关的工具集，用普通 Markdown 在仓库中记录项目的持久决策、需求和约束。">
+<meta name="twitter:title" content="BRAIN.md — 为你的项目提供持久记忆层">
+<meta name="twitter:description" content="开放、代理无关的项目知识标准，用普通 Markdown 记录项目的持久决策——通过一个轻量 CLI 读写，随仓库一起走，跨代理、跨机器、跨模型。">
 <meta name="twitter:image" content="https://projectbrain.md/og-image.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css" rel="stylesheet">
@@ -45,7 +45,7 @@
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
     "downloadUrl": "https://github.com/mindmuxai/brain.md",
-    "featureList": "零依赖, Git 原生, 结构保证正确, Wiki 链接交叉引用, 代理无关",
+    "featureList": "零依赖，Git 原生，结构保证正确，Wiki 链接交叉引用，代理无关",
     "releaseNotes": "https://github.com/mindmuxai/brain.md/releases",
     "offers": {
       "@type": "Offer",
@@ -58,7 +58,7 @@
     "@type": "SoftwareSourceCode",
     "name": "BRAIN.md",
     "url": "https://projectbrain.md/zh/",
-    "description": "为项目提供持久记忆层：一套 BRAIN.md 协议和安装优先、代理无关的工具集，用普通 Markdown 在仓库中记录持久决策、需求和约束。",
+    "description": "为项目提供持久记忆层。开放、代理无关的标准，用普通 Markdown 记录持久决策——每次读写都通过一个零依赖 CLI。无需服务，无需 MCP 服务器。",
     "codeRepository": "https://github.com/mindmuxai/brain.md",
     "programmingLanguage": "JavaScript",
     "runtimePlatform": "Node.js",
@@ -130,13 +130,51 @@
       <img src="/icon.svg" alt="BRAIN.md" width="96" height="96">
     </div>
 
-    <h1 class="hero-title"><code>BRAIN.md</code> <span class="sr-only">— 开放项目大脑标准</span></h1>
-    <p class="hero-desc">
-      <strong>为你的项目提供持久记忆层</strong>：一套 BRAIN.md 协议，加上安装优先、代理无关的工具集，用普通 Markdown 在仓库中记录项目的持久决策、需求和约束。
-    </p>
+    <h1 class="hero-title"><code>BRAIN.md</code> <span class="sr-only">— 为你的项目提供持久记忆层</span></h1>
+    <p class="hero-tagline">每次关掉对话窗口，AI 就失忆了——<code class="inline">BRAIN.md</code> 让它拥有真正留得住的记忆。</p>
+
+    <div class="hero-contrast">
+
+      <div class="contrast-col contrast-col--before">
+        <div class="ui-window ui-window--terminal">
+          <div class="ui-window__titlebar">
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__title">没有 BRAIN.md</span>
+          </div>
+          <div class="ui-window__body">
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> 继续搞认证流程吧</div>
+            <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>没问题！能先给我一些背景吗：<br>&nbsp;&nbsp;· 这是什么类型的应用？<br>&nbsp;&nbsp;· 技术栈是什么？<br>&nbsp;&nbsp;· 遇到了什么问题？<br>&nbsp;&nbsp;· 有什么需要注意的约束吗？</span></div>
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> <span>好吧……我在做一个本地优先的笔记应用，Electron + SQLite，单用户，没有后端。上周我们聊过为什么 JWT 不适合这里……两周前我们排除了 Redis……你还帮我分析过各种方案的权衡……总之，我想继续讨论持久化策略……</span></div>
+            <div class="terminal-line terminal-line--dim">你刚打了 318 个字。这个月第四次了。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contrast-col contrast-col--after">
+        <div class="ui-window ui-window--terminal">
+          <div class="ui-window__titlebar">
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__title">有了 BRAIN.md</span>
+          </div>
+          <div class="ui-window__body">
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> 继续搞认证流程吧</div>
+            <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>已读取 <code class="terminal-code">brain/pages/auth.md</code> — 继续上次进度：<br>&nbsp;&nbsp;· Electron + SQLite，本地优先，单用户<br>&nbsp;&nbsp;· JWT 已排除——没有服务端，开销不值得<br>&nbsp;&nbsp;· 待定：会话持久化方案<br><br>从哪里开始？</span></div>
+            <div class="terminal-line terminal-line--dim">五个字。AI 已经知道你上次停在哪了。</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="hero-ownership">你的大脑就是本地的一个 Markdown 文件夹，完全属于你。可以 Git 管理、随处迁移、用任何工具直接阅读。</p>
 
     <div class="hero-actions">
-      <a href="https://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
+      <a href="#get-started" class="btn-primary">立即上手</a>
+      <a href="https://github.com/mindmuxai/brain.md" class="btn-secondary" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub
       </a>
@@ -146,78 +184,28 @@
 
 <main>
 
-<!-- ── Hero visual anchor ── -->
-<div class="hero-visual">
-  <div class="mock-window">
-    <div class="mock-titlebar">
-      <div class="mock-dot"></div>
-      <div class="mock-dot"></div>
-      <div class="mock-dot"></div>
-      <span class="mock-filename">my-project/brain/pages/db-choice.md</span>
-    </div>
-    <div class="mock-body">
-      <div class="mock-tree">
-        my-project/<br>
-        <span class="indent">├── <span style="color:#79c0ff;font-weight:500">BRAIN.md</span></span><br>
-        <span class="indent">└── brain/</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── index.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── background.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── architecture.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── flow.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── mindmap.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── stack.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── roadmap.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="active">db-choice.md</span></span>
-      </div>
-      <div class="mock-content">
-<span class="mc-fm">---</span><br>
-<span class="mc-key">id:</span>       <span class="mc-val">db-choice</span><br>
-<span class="mc-key">title:</span>    <span class="mc-val">Database Selection</span><br>
-<span class="mc-key">category:</span> <span class="mc-val">decision</span><br>
-<span class="mc-key">status:</span>   <span class="mc-val">active</span><br>
-<span class="mc-key">tags:</span>     <span class="mc-val">[storage, infra]</span><br>
-<span class="mc-key">created:</span>  <span class="mc-val">"2026-06-22T09:00"</span><br>
-<span class="mc-key">updated:</span>  <span class="mc-val">"2026-06-22T14:30"</span><br>
-<span class="mc-fm">---</span><br>
-<br>
-<span class="mc-sec">## compiled_truth</span><br>
-<span class="mc-body">Use PostgreSQL. SQLite ruled out for multi-writer prod workload.</span><br>
-<span class="mc-body">MongoDB rejected — relational joins are load-bearing for reporting.</span><br>
-<span class="mc-body">See architecture.md for data-layer context.</span><br>
-<br>
-<span class="mc-sec">## timeline</span><br>
-<span class="mc-dim">- time: 2026-06-22T14:30</span><br>
-<span class="mc-dim">&nbsp;&nbsp;kind: decision</span><br>
-<span class="mc-dim">&nbsp;&nbsp;summary: Chose Postgres after eval of three options</span><br>
-<span class="mc-dim">&nbsp;&nbsp;source: internal-db-eval</span><br>
-<span class="mc-dim">&nbsp;&nbsp;affects: [architecture, stack]</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ── Why section ── -->
 <section class="section" aria-labelledby="why-heading">
   <p class="section-label">为什么是 BRAIN.md</p>
 
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="why-heading">不是 README。<br>也不是记忆倾倒。</h2>
+      <h2 class="section-heading" id="why-heading">README 是给人看的。<br>大脑是用来记决策的。</h2>
       <p class="section-body">
-        每个项目通常已经有面向人的 <code class="inline">README.md</code>，
-        以及面向 AI 编码工具的 <code class="inline">AGENTS.md</code>。
-        但它们都不负责记录决策背后的 <em>为什么</em>。
+        <code class="inline">README.md</code> 面向人类。
+        <code class="inline">AGENTS.md</code> 告诉 AI 如何在仓库里干活。
+        但两者都不记录你 <em>为什么</em> 这样决策——
+        那正是项目大脑的职责：把那些你每次开新对话都要重新解释一遍的决策，一次性存下来。
       </p>
       <p class="section-body">
-        项目大脑存储的是 <strong>决策级知识</strong>：
-        经过审查、结构化，并且足够权威，可以指导后续推理和代码生成的结论。
-        它位于 <code class="inline">brain/</code> 文件夹中，随仓库一起交付。
+        项目大脑存储的是<strong>决策级知识</strong>——
+        经过审查、结构化，权威到足以指导后续推理和代码生成的结论。
+        它住在 <code class="inline">brain/</code> 文件夹里，随仓库一起交付。
       </p>
       <p class="section-body">
-        项目根目录中的一个 <code class="inline">BRAIN.md</code> 是协议入口：
-        任何读到它的编码代理都知道如何使用这个项目大脑。
-        不需要运行时服务，也不需要 MCP 服务器；只有普通文件约定和一个零依赖 CLI。
+        项目根目录的 <code class="inline">BRAIN.md</code> 是协议入口：
+        任何读到它的编码代理都知道怎么使用这个项目大脑。
+        不需要运行时服务，也不需要 MCP 服务器——只有普通文件约定加一个零依赖 CLI。
       </p>
     </div>
 
@@ -258,6 +246,8 @@
 </section>
 
 
+
+
 <!-- ── Structure section ── -->
 <section class="section" aria-labelledby="structure-heading">
   <p class="section-label">结构</p>
@@ -267,40 +257,39 @@
       <p class="section-body">
         六个固定根页面覆盖项目级视角：背景、架构、
         流程、思维导图、技术栈和路线图。它们只会被更新，不会被重复创建，
-        也不携带 timeline：它们的历史由 git 记录。可以使用
+        也不携带 timeline——历史由 git 负责。可以用
         <code class="inline">mermaid</code> 图让内容更直观。
       </p>
       <p class="section-body">
         <code class="inline">pages/*.md</code> 是细粒度、可安全追加的知识单元，
-        归属于五类之一：<code class="inline">decision</code>,
-        <code class="inline">concept</code>, <code class="inline">project</code>,
-        <code class="inline">person</code>, <code class="inline">reference</code>.
+        归属于五类之一：<code class="inline">decision</code>、
+        <code class="inline">concept</code>、<code class="inline">project</code>、
+        <code class="inline">person</code>、<code class="inline">reference</code>。
         每个页面同时记录当前最佳理解（<code class="inline">compiled_truth</code>）
         和完整证据链（<code class="inline">timeline</code>）。
       </p>
     </div>
 
-    <div class="mock-window">
-      <div class="mock-titlebar">
-        <div class="mock-dot"></div>
-        <div class="mock-dot"></div>
-        <div class="mock-dot"></div>
-        <span class="mock-filename">my-project/</span>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">my-project/</span>
       </div>
-      <div class="mock-tree" style="padding: 16px 20px; line-height: 1.9; white-space: pre; overflow-x: auto;">my-project/
-<span class="indent">├── <span style="color:#79c0ff;font-weight:500">BRAIN.md</span>             <span style="color:#777">← 协议入口</span></span>
+      <div class="ui-window__body tree-body">my-project/
+<span class="indent">├── <span class="tree-hi">BRAIN.md</span>             <span class="tree-cm">← 协议入口</span></span>
 <span class="indent">└── brain/</span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">index.md</span>         <span style="color:#777">← reindex 生成</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">background.md</span>    <span style="color:#777">← 项目为何存在</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">architecture.md</span>  <span style="color:#777">← 系统形态与模块</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">flow.md</span>          <span style="color:#777">← 关键端到端流程</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">mindmap.md</span>       <span style="color:#777">← 功能思维导图</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">stack.md</span>         <span style="color:#777">← 技术选择</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">roadmap.md</span>       <span style="color:#777">← 里程碑与顺序</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">index.md</span>         <span class="tree-cm">← reindex 生成</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">background.md</span>    <span class="tree-cm">← 项目为何存在</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">architecture.md</span>  <span class="tree-cm">← 系统形态与模块</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">flow.md</span>          <span class="tree-cm">← 关键端到端流程</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">mindmap.md</span>       <span class="tree-cm">← 功能思维导图</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">stack.md</span>         <span class="tree-cm">← 技术选择</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">roadmap.md</span>       <span class="tree-cm">← 里程碑与顺序</span></span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── db-choice.md</span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── auth-strategy.md</span>
-      </div>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── auth-strategy.md</span></div>
     </div>
   </div>
 </section>
@@ -311,37 +300,42 @@
   <p class="section-label">页面格式</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="page-format-heading">compiled_truth +<br>只追加 timeline。</h2>
+      <h2 class="section-heading" id="page-format-heading">compiled_truth +<br>只追加的 timeline。</h2>
       <p class="section-body">
         <code class="inline">pages/</code> 中的每个页面都有两个部分。
-        <strong>compiled_truth</strong> 是当前权威答案；
-        随着理解变化，可以自由重写它。
+        <strong>compiled_truth</strong> 是当前的权威答案——
+        随着认知演进，可以自由重写。
       </p>
       <p class="section-body">
         <strong>timeline</strong> 是只追加的证据记录。
         当结论改变时，<code class="inline">update-truth</code>
-        会原子地重写 <code class="inline">compiled_truth</code>，并追加一个
-        <code class="inline">decision</code> 条目。旧结论仍保留在记录中。
+        会原子地重写 <code class="inline">compiled_truth</code>，并追加一条
+        <code class="inline">decision</code> 记录。旧结论仍保留在历史中。
       </p>
       <p class="section-body">
-        Timeline 条目类型包括：<code class="inline">decision</code>,
-        <code class="inline">evidence</code>,
-        <code class="inline">reversal</code>,
+        Timeline 条目类型包括：<code class="inline">decision</code>、
+        <code class="inline">evidence</code>、
+        <code class="inline">reversal</code>、
         <code class="inline">note</code>。重写 <code class="inline">compiled_truth</code>
-        和追加对应的 <code class="inline">decision</code> 条目会在一次原子写入中完成；
-        不能只做其中一件。
+        和追加对应的 <code class="inline">decision</code> 条目在一次原子写入中完成；
+        两件事不能只做其中一件。
       </p>
       <p class="section-body">
-        交叉引用使用 wiki-link 语法：
-        <code class="inline">[[page-id]]</code>
+        交叉引用使用 wiki-link 语法
+        <code class="inline">[[page-id]]</code>，
         其中 <code class="inline">page-id</code> 必须与 frontmatter 的 <code class="inline">id</code> 字段完全匹配。
-        运行 <code class="inline">brain lint-links</code> 可以确认每个链接都能解析。
+        运行 <code class="inline">brain lint-links</code> 可验证每个链接都能解析。
       </p>
     </div>
 
-    <div class="frontmatter-block">
-      <div class="fm-header">pages/auth-strategy.md</div>
-      <div class="fm-body"><span class="fm-comment">---</span>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">pages/auth-strategy.md</span>
+      </div>
+      <div class="ui-window__body fm-body"><span class="fm-comment">---</span>
 <span class="fm-key">id:</span>       <span class="fm-val">auth-strategy</span>
 <span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
 <span class="fm-key">category:</span> <span class="fm-val">decision</span>
@@ -369,7 +363,7 @@
 <!-- ── Feature cards ── -->
 <section class="section" aria-labelledby="features-heading">
   <p class="section-label">特性</p>
-  <h2 class="section-heading mb-6" id="features-heading">推理代理需要的一切。</h2>
+  <h2 class="section-heading mb-6" id="features-heading">推理代理所需的一切。</h2>
 
   <div class="feat-grid">
 
@@ -382,7 +376,7 @@
         <span class="dim">运行在普通 Node 上，零依赖</span>
       </div>
       <div class="feat-card-title">零依赖</div>
-      <div class="feat-card-desc">不需要 npm install，不需要运行时服务，也没有后台守护进程。只有一个用 <code class="inline">node</code> 运行的零依赖参考 CLI。项目大脑随仓库一起交付。</div>
+      <div class="feat-card-desc">不需要 npm install，不需要运行时服务，也没有后台守护进程。一个用 <code class="inline">node</code> 运行的零依赖参考 CLI。项目大脑随仓库一起交付。</div>
     </div>
 
     <div class="feat-card">
@@ -393,7 +387,7 @@
         <span class="dim">  在一次原子写入中完成</span>
       </div>
       <div class="feat-card-title">结构保证正确</div>
-      <div class="feat-card-desc">每次读写都通过 <code class="inline">brain</code> CLI。格式错误的 frontmatter 和没有追踪记录的 truth 重写在结构上不可发生，因此不需要额外运行验证器。</div>
+      <div class="feat-card-desc">每次读写都通过 <code class="inline">brain</code> CLI。格式错误的 frontmatter 和无追踪记录的 truth 重写在结构上不可发生——根本不需要跑验证器。</div>
     </div>
 
     <div class="feat-card">
@@ -424,7 +418,7 @@
       <div class="feat-card-media">
         <span class="dim">## compiled_truth</span><br>
         <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
-        <span class="dim">不是原始笔记倾倒</span><br>
+        <span class="dim">不是原始笔记堆砌</span><br>
         <span class="dim">不是向量索引</span><br>
         <span class="hi">只存权威决策</span>
       </div>
@@ -441,48 +435,25 @@
         <span class="dim">跨代理共享</span>
       </div>
       <div class="feat-card-title">代理无关</div>
-      <div class="feat-card-desc">使用中立命名的开放标准。四个技能安装一次，就能服务 Claude Code、Codex 和任何能读文件的代理。没有厂商锁定。</div>
+      <div class="feat-card-desc">中立命名的开放标准。四个技能安装一次，即可服务 Claude Code、Codex 和任何能读文件的代理。没有厂商锁定。</div>
     </div>
 
   </div>
 </section>
 
 
-<!-- ── Toolkit / CLI section ── -->
-<section class="section" aria-labelledby="toolkit-heading">
-  <p class="section-label">工具集</p>
-  <div class="two-col">
-    <div>
-      <h2 class="section-heading" id="toolkit-heading">安装一次。<br>任何项目都有大脑。</h2>
-      <p class="section-body">
-        这是一套安装优先的工具集，而不是某个项目大脑本身。
-        运行一次 <code class="inline">./setup</code>，它会把技能软链接到检测到的每个代理中：
-        目前包括 Claude Code
-        (<code class="inline">~/.claude/skills</code>) 和 Codex
-        (<code class="inline">~/.codex/skills</code>)。
-      </p>
-      <p class="section-body">
-        然后在任何项目中运行 <code class="inline">brain-setup</code>：
-        它会搭建 <code class="inline">BRAIN.md</code> 和 <code class="inline">brain/</code>
-        骨架，并把 <code class="inline">CLAUDE.md</code> /
-        <code class="inline">AGENTS.md</code> 接入协议。
-        随后 <code class="inline">brain-bootstrap</code> 会从代码、文档和
-        <code class="inline">git log</code> 中播种真实知识；也可以通过访谈来捕获。
-      </p>
-      <p class="section-body mb-6">
-        四个技能负责具体工作：<code class="inline">brain-setup</code>,
-        <code class="inline">brain-bootstrap</code>,
-        <code class="inline">brain-page</code>（携带 CLI），以及
-        <code class="inline">brain-ingest</code>。
-      </p>
-    </div>
+<!-- ── Get Started ── -->
+<section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
+  <p class="section-label">开始使用</p>
+  <h2 class="section-heading" id="get-started-heading">给你的 AI 代理一个大脑。</h2>
+  <div class="ui-window code-block"><span class="cm"># 1. 克隆并全局安装一次</span>
+<span class="kw">git clone</span> https://github.com/mindmuxai/brain.md
+<span class="kw">cd</span> brain.md &amp;&amp; <span class="kw">./setup</span>
+<span class="dim">→ 已安装 4 个技能到 ~/.claude/skills</span>
 
-    <div class="code-block"><span class="cm"># 1. 全局安装一次工具</span>
-<span class="kw">./setup</span>
-
-<span class="cm"># 2. 让你的代理运行这些技能</span>
-<span class="cm"># /brain-setup  → 搭建 BRAIN.md + brain/</span>
-<span class="cm"># /brain-bootstrap → 从代码和 git 播种知识</span>
+<span class="cm"># 2. 在任意项目中搭建并播种</span>
+<span class="prompt">/</span><span class="hi">brain-setup</span>      <span class="cm"># 创建 BRAIN.md + brain/</span>
+<span class="prompt">/</span><span class="hi">brain-bootstrap</span>  <span class="cm"># 从代码和 git log 播种知识</span>
 
 <span class="cm"># 3. 接入 brain CLI</span>
 brain() { node skills/brain-page/bin/brain.mjs <span class="str">"$@"</span>; }
@@ -490,72 +461,18 @@ brain() { node skills/brain-page/bin/brain.mjs <span class="str">"$@"</span>; }
 <span class="cm"># 4. 只通过 CLI 读写</span>
 brain <span class="str">ls</span>
 brain <span class="str">cat</span> db-choice
-brain <span class="str">create-page</span> --id db-choice \
-  --category decision --title <span class="str">"Use Postgres"</span>
-echo <span class="str">"the new understanding"</span> \
-  | brain <span class="str">update-truth</span> --id db-choice \
-      --summary <span class="str">"why it changed"</span>
+brain <span class="str">update-truth</span> --id db-choice \
+  --summary <span class="str">"为什么改变了"</span>
 brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span></div>
-  </div>
-</section>
 
-<!-- ── CTA ── -->
-<section class="cta-wrap" aria-labelledby="get-started-heading">
-    <p class="section-label">开始使用</p>
-    <h2 class="section-heading" id="get-started-heading">给你的 AI 代理一个项目大脑。</h2>
-    <div class="steps-grid" style="text-align:left;margin-top:24px;">
-
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">克隆工具集</div>
-          <div class="step-desc">下载一次即可。工具集存在于你的机器上，而不是绑定在某一个项目里。</div>
-          <div class="step-code"><span class="prompt">$</span> <span class="hi">git clone https://github.com/mindmuxai/brain.md</span>
-<span class="prompt">$</span> <span class="hi">cd brain.md</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">全局安装</div>
-          <div class="step-desc">把四个技能软链接到每个检测到的代理中，包括 Claude Code、Codex 和任何兼容代理。</div>
-          <div class="step-code"><span class="prompt">$</span> <span class="hi">./setup</span>
-<span class="dim">→ 已安装 4 个技能到 ~/.claude/skills</span>
-<span class="dim">→ 已安装 4 个技能到 ~/.codex/skills</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">搭建项目大脑</div>
-          <div class="step-desc">在你的编码代理中打开项目并运行 setup 技能。它会创建 <code class="inline">BRAIN.md</code> 和 <code class="inline">brain/</code> 骨架。</div>
-          <div class="step-code"><span class="dim"># 在你的编码代理中（Claude Code、Codex...）</span>
-<span class="prompt">/</span><span class="hi">brain-setup</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">播种知识</div>
-          <div class="step-desc">Bootstrap 会读取代码、文档和 git log，用真实决策填充项目大脑；也可以通过访谈来捕获知识。</div>
-          <div class="step-code"><span class="prompt">/</span><span class="hi">brain-bootstrap</span>
-<span class="dim">→ 读取代码 + git log</span>
-<span class="dim">→ 向 brain/ 写入结构化页面</span></div>
-        </div>
-      </div>
-
-    </div>
+  <p class="cta-docs"><a href="https://github.com/mindmuxai/brain.md" target="_blank" rel="noopener">查看完整文档 →</a></p>
 </section>
 
 <!-- ── FAQ Section ── -->
-<hr class="divider">
 <section class="section" aria-labelledby="faq-heading">
   <p class="section-label">FAQ</p>
   <h2 class="section-heading" id="faq-heading">常见问题</h2>
-  
+
   <div class="faq-list">
     <details class="faq-item">
       <summary class="faq-q">BRAIN.md 是什么？</summary>
@@ -589,7 +506,7 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
 <footer>
   <div class="footer-left">
     <a href="/zh/" class="footer-logo">BRAIN.md</a>
-    <span class="footer-meta">由 <a href="https://mindmux.ai" target="_blank" rel="noopener">MindMux 团队</a>维护。灵感来自 <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki</a> 和 <a href="https://github.com/garrytan/gbrain" target="_blank" rel="noopener">GBrain</a>。</span>
+    <span class="footer-meta">由 <a href="https://mindmux.ai" target="_blank" rel="noopener">MindMux 团队</a> 维护。灵感来自 <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki</a> 和 <a href="https://github.com/garrytan/gbrain" target="_blank" rel="noopener">GBrain</a>。</span>
   </div>
   <div class="footer-right">
     <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
