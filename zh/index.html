@@ -278,15 +278,15 @@
         <span class="ui-window__title">my-project/</span>
       </div>
       <div class="ui-window__body tree-body">my-project/
-<span class="indent">├── <span class="tree-hi">BRAIN.md</span>             <span class="tree-cm">← 协议入口</span></span>
+<span class="indent">├── <span class="window-key">BRAIN.md</span>             <span class="window-muted">← 协议入口</span></span>
 <span class="indent">└── brain/</span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">index.md</span>         <span class="tree-cm">← reindex 生成</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">background.md</span>    <span class="tree-cm">← 项目为何存在</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">architecture.md</span>  <span class="tree-cm">← 系统形态与模块</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">flow.md</span>          <span class="tree-cm">← 关键端到端流程</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">mindmap.md</span>       <span class="tree-cm">← 功能思维导图</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">stack.md</span>         <span class="tree-cm">← 技术选择</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">roadmap.md</span>       <span class="tree-cm">← 里程碑与顺序</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">index.md</span>         <span class="window-muted">← reindex 生成</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">background.md</span>    <span class="window-muted">← 项目为何存在</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">architecture.md</span>  <span class="window-muted">← 系统形态与模块</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">flow.md</span>          <span class="window-muted">← 关键端到端流程</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">mindmap.md</span>       <span class="window-muted">← 功能思维导图</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">stack.md</span>         <span class="window-muted">← 技术选择</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="window-strong">roadmap.md</span>       <span class="window-muted">← 里程碑与顺序</span></span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── db-choice.md</span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── auth-strategy.md</span></div>
@@ -335,26 +335,26 @@
         <span class="ui-window__dot"></span>
         <span class="ui-window__title">pages/auth-strategy.md</span>
       </div>
-      <div class="ui-window__body fm-body"><span class="fm-comment">---</span>
-<span class="fm-key">id:</span>       <span class="fm-val">auth-strategy</span>
-<span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
-<span class="fm-key">category:</span> <span class="fm-val">decision</span>
-<span class="fm-key">status:</span>   <span class="fm-val">active</span>
-<span class="fm-key">created:</span>  <span class="fm-val">"2026-06-10T11:20"</span>
-<span class="fm-key">updated:</span>  <span class="fm-val">"2026-06-20T09:15"</span>
-<span class="fm-comment">---</span>
+      <div class="ui-window__body fm-body"><span class="window-muted">---</span>
+<span class="window-key">id:</span>       <span class="window-string">auth-strategy</span>
+<span class="window-key">title:</span>    <span class="window-string">Authentication Strategy</span>
+<span class="window-key">category:</span> <span class="window-string">decision</span>
+<span class="window-key">status:</span>   <span class="window-string">active</span>
+<span class="window-key">created:</span>  <span class="window-string">"2026-06-10T11:20"</span>
+<span class="window-key">updated:</span>  <span class="window-string">"2026-06-20T09:15"</span>
+<span class="window-muted">---</span>
 &nbsp;
-<span class="fm-sec">## compiled_truth</span>
-<span class="fm-body-text">Use JWT with short-lived access tokens.</span>
-<span class="fm-body-text">Session cookies ruled out for API-first</span>
-<span class="fm-body-text">clients. See [[api-versioning]].</span>
+<span class="window-section">## compiled_truth</span>
+<span class="window-strong">Use JWT with short-lived access tokens.</span>
+<span class="window-strong">Session cookies ruled out for API-first</span>
+<span class="window-strong">clients. See [[api-versioning]].</span>
 &nbsp;
-<span class="fm-sec">## timeline</span>
-<span class="fm-comment">- time: 2026-06-20T09:15</span>
-<span class="fm-comment">  kind: reversal</span>
-<span class="fm-comment">  summary: Dropped OAuth — scope creep</span>
-<span class="fm-comment">  source: internal-review-2026-06</span>
-<span class="fm-comment">  affects: [auth-strategy, stack]</span></div>
+<span class="window-section">## timeline</span>
+<span class="window-muted">- time: 2026-06-20T09:15</span>
+<span class="window-muted">  kind: reversal</span>
+<span class="window-muted">  summary: Dropped OAuth — scope creep</span>
+<span class="window-muted">  source: internal-review-2026-06</span>
+<span class="window-muted">  affects: [auth-strategy, stack]</span></div>
     </div>
   </div>
 </section>
@@ -446,24 +446,31 @@
 <section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
   <p class="section-label">开始使用</p>
   <h2 class="section-heading" id="get-started-heading">给你的 AI 代理一个大脑。</h2>
-  <div class="ui-window code-block"><span class="cm"># 1. 克隆并全局安装一次</span>
-<span class="kw">git clone</span> https://github.com/mindmuxai/brain.md
-<span class="kw">cd</span> brain.md &amp;&amp; <span class="kw">./setup</span>
-<span class="dim">→ 已安装 4 个技能到 ~/.claude/skills</span>
+  <div class="ui-window ui-window--terminal">
+    <div class="ui-window__titlebar">
+      <span class="ui-window__dot"></span>
+      <span class="ui-window__dot"></span>
+      <span class="ui-window__dot"></span>
+      <span class="ui-window__title">快速开始</span>
+    </div>
+    <div class="ui-window__body command-body"><span class="window-muted"># 1. 克隆并全局安装一次</span>
+<span class="window-key">git clone</span> https://github.com/mindmuxai/brain.md
+<span class="window-key">cd</span> brain.md &amp;&amp; <span class="window-key">./setup</span>
+<span class="window-muted">→ 已安装 4 个技能到 ~/.claude/skills</span>
 
-<span class="cm"># 2. 在任意项目中搭建并播种</span>
-<span class="prompt">/</span><span class="hi">brain-setup</span>      <span class="cm"># 创建 BRAIN.md + brain/</span>
-<span class="prompt">/</span><span class="hi">brain-bootstrap</span>  <span class="cm"># 从代码和 git log 播种知识</span>
+<span class="window-muted"># 2. 在任意项目中搭建并播种</span>
+<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># 创建 BRAIN.md + brain/</span>
+<span class="window-muted">/</span><span class="window-key">brain-bootstrap</span>  <span class="window-muted"># 从代码和 git log 播种知识</span>
 
-<span class="cm"># 3. 接入 brain CLI</span>
-brain() { node skills/brain-page/bin/brain.mjs <span class="str">"$@"</span>; }
+<span class="window-muted"># 3. 接入 brain CLI</span>
+brain() { node skills/brain-page/bin/brain.mjs <span class="window-string">"$@"</span>; }
 
-<span class="cm"># 4. 只通过 CLI 读写</span>
-brain <span class="str">ls</span>
-brain <span class="str">cat</span> db-choice
-brain <span class="str">update-truth</span> --id db-choice \
-  --summary <span class="str">"为什么改变了"</span>
-brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span></div>
+<span class="window-muted"># 4. 只通过 CLI 读写</span>
+brain <span class="window-string">ls</span>
+brain <span class="window-string">cat</span> db-choice
+brain <span class="window-string">update-truth</span> --id db-choice --summary <span class="window-string">"为什么改变了"</span>
+brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="window-string">lint-links</span></div>
+  </div>
 
   <p class="cta-docs"><a href="https://github.com/mindmuxai/brain.md" target="_blank" rel="noopener">查看完整文档 →</a></p>
 </section>
@@ -510,6 +517,7 @@ brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-l
   </div>
   <div class="footer-right">
     <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/mindmuxai/brain.md/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">Apache-2.0</a>
     <nav class="language-switcher language-switcher-footer" aria-label="语言">
       <a href="/">EN</a>
       <a href="/zh/" lang="zh-CN" aria-current="page">中文</a>
