@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BRAIN.md — A persistent memory layer for your projects</title>
-<meta name="description" content="A persistent memory layer for your projects. An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — every read and write through one zero-dependency CLI. No service, no MCP server.">
+<meta name="description" content="An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — read and written through one small CLI. It lives in your repo and travels across agents, machines, and models.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -14,13 +14,13 @@
 <link rel="alternate" hreflang="x-default" href="https://projectbrain.md/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BRAIN.md">
-<meta property="og:title" content="BRAIN.md — The Open Project Brain Standard">
-<meta property="og:description" content="A persistent memory layer for your projects. An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — every read and write through one zero-dependency CLI. No service, no MCP server.">
+<meta property="og:title" content="BRAIN.md — A persistent memory layer for your projects">
+<meta property="og:description" content="An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — read and written through one small CLI. It lives in your repo and travels across agents, machines, and models.">
 <meta property="og:url" content="https://projectbrain.md/">
 <meta property="og:image" content="https://projectbrain.md/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BRAIN.md — The Open Project Brain Standard">
-<meta name="twitter:description" content="A persistent memory layer for your projects. An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — every read and write through one zero-dependency CLI. No service, no MCP server.">
+<meta name="twitter:title" content="BRAIN.md — A persistent memory layer for your projects">
+<meta name="twitter:description" content="An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — read and written through one small CLI. It lives in your repo and travels across agents, machines, and models.">
 <meta name="twitter:image" content="https://projectbrain.md/og-image.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css" rel="stylesheet">
@@ -138,9 +138,9 @@
       <div class="contrast-col contrast-col--before">
         <div class="ui-window ui-window--terminal">
           <div class="ui-window__titlebar">
-            <span class="ui-window__dot ui-window__dot"></span>
-            <span class="ui-window__dot ui-window__dot"></span>
-            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
             <span class="ui-window__title">Without BRAIN.md</span>
           </div>
           <div class="ui-window__body">
@@ -155,9 +155,9 @@
       <div class="contrast-col contrast-col--after">
         <div class="ui-window ui-window--terminal">
           <div class="ui-window__titlebar">
-            <span class="ui-window__dot ui-window__dot"></span>
-            <span class="ui-window__dot ui-window__dot"></span>
-            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
+            <span class="ui-window__dot"></span>
             <span class="ui-window__title">With BRAIN.md</span>
           </div>
           <div class="ui-window__body">
@@ -274,9 +274,9 @@
 
     <div class="ui-window ui-window--terminal">
       <div class="ui-window__titlebar">
-        <span class="ui-window__dot ui-window__dot--red"></span>
-        <span class="ui-window__dot ui-window__dot--yellow"></span>
-        <span class="ui-window__dot ui-window__dot--green"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
         <span class="ui-window__title">my-project/</span>
       </div>
       <div class="ui-window__body tree-body">my-project/
@@ -332,9 +332,9 @@
 
     <div class="ui-window ui-window--terminal">
       <div class="ui-window__titlebar">
-        <span class="ui-window__dot ui-window__dot--red"></span>
-        <span class="ui-window__dot ui-window__dot--yellow"></span>
-        <span class="ui-window__dot ui-window__dot--green"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
         <span class="ui-window__title">pages/auth-strategy.md</span>
       </div>
       <div class="ui-window__body fm-body"><span class="fm-comment">---</span>
@@ -466,6 +466,8 @@ brain <span class="str">cat</span> db-choice
 brain <span class="str">update-truth</span> --id db-choice \
   --summary <span class="str">"why it changed"</span>
 brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span></div>
+
+  <p class="cta-docs"><a href="https://github.com/mindmuxai/brain.md" target="_blank" rel="noopener">View full documentation →</a></p>
 
   </div>
 </section>
