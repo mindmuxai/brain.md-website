@@ -131,12 +131,50 @@
     </div>
 
     <h1 class="hero-title"><code>BRAIN.md</code> <span class="sr-only">— A persistent memory layer for your projects</span></h1>
-    <p class="hero-desc">
-      <strong>A persistent memory layer for your projects.</strong> An open, agent-agnostic standard for capturing a project's durable knowledge as plain Markdown — every read and write through one zero-dependency CLI. No service, no MCP server.
-    </p>
+    <p class="hero-tagline">Your AI forgets everything the moment you close the tab — <code class="inline">BRAIN.md</code> gives it a memory that actually persists.</p>
+
+    <div class="hero-contrast">
+
+      <div class="contrast-col contrast-col--before">
+        <div class="ui-window ui-window--terminal">
+          <div class="ui-window__titlebar">
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__title">Without BRAIN.md</span>
+          </div>
+          <div class="ui-window__body">
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> Let's keep working on the auth flow</div>
+            <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>Happy to help! Could you first share some context:<br>&nbsp;&nbsp;· What kind of app is this?<br>&nbsp;&nbsp;· What's your tech stack?<br>&nbsp;&nbsp;· What problem are you running into?<br>&nbsp;&nbsp;· Any constraints I should know about?</span></div>
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> <span>Okay so... I'm building a local-first note-taking app, Electron + SQLite, single user, no backend. Last week we talked about why JWT doesn't fit here... Two weeks ago we ruled out Redis... You also helped me think through the trade-offs on... Anyway, I want to pick up on the persistence strategy...</span></div>
+            <div class="terminal-line terminal-line--dim">You just typed 318 words. Fourth time this month.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contrast-col contrast-col--after">
+        <div class="ui-window ui-window--terminal">
+          <div class="ui-window__titlebar">
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__dot ui-window__dot"></span>
+            <span class="ui-window__title">With BRAIN.md</span>
+          </div>
+          <div class="ui-window__body">
+            <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> Let's keep working on the auth flow</div>
+            <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>From <code class="terminal-code">brain/pages/auth.md</code> — Picking up from last time:<br>&nbsp;&nbsp;· Electron + SQLite, local-first, single user<br>&nbsp;&nbsp;· JWT ruled out — no server, not worth the overhead<br>&nbsp;&nbsp;· Still open: session persistence strategy<br><br>Where do you want to start?</span></div>
+            <div class="terminal-line terminal-line--dim">Five words in. AI already knows where you left off.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="hero-ownership">Your brain is a local Markdown folder. It's yours. Git it, move it, read it with any tool.</p>
 
     <div class="hero-actions">
-      <a href="https://github.com/mindmuxai/brain.md" class="btn-primary" target="_blank" rel="noopener">
+      <a href="#get-started" class="btn-primary">Get started</a>
+      <a href="https://github.com/mindmuxai/brain.md" class="btn-secondary" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         GitHub
       </a>
@@ -146,68 +184,18 @@
 
 <main>
 
-<!-- ── Hero visual anchor ── -->
-<div class="hero-visual">
-  <div class="mock-window">
-    <div class="mock-titlebar">
-      <div class="mock-dot"></div>
-      <div class="mock-dot"></div>
-      <div class="mock-dot"></div>
-      <span class="mock-filename">my-project/brain/pages/db-choice.md</span>
-    </div>
-    <div class="mock-body">
-      <div class="mock-tree">
-        my-project/<br>
-        <span class="indent">├── <span style="color:#79c0ff;font-weight:500">BRAIN.md</span></span><br>
-        <span class="indent">└── brain/</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── index.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── background.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── architecture.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── flow.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── mindmap.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── stack.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── roadmap.md</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span><br>
-        <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="active">db-choice.md</span></span>
-      </div>
-      <div class="mock-content">
-<span class="mc-fm">---</span><br>
-<span class="mc-key">id:</span>       <span class="mc-val">db-choice</span><br>
-<span class="mc-key">title:</span>    <span class="mc-val">Database Selection</span><br>
-<span class="mc-key">category:</span> <span class="mc-val">decision</span><br>
-<span class="mc-key">status:</span>   <span class="mc-val">active</span><br>
-<span class="mc-key">tags:</span>     <span class="mc-val">[storage, infra]</span><br>
-<span class="mc-key">created:</span>  <span class="mc-val">"2026-06-22T09:00"</span><br>
-<span class="mc-key">updated:</span>  <span class="mc-val">"2026-06-22T14:30"</span><br>
-<span class="mc-fm">---</span><br>
-<br>
-<span class="mc-sec">## compiled_truth</span><br>
-<span class="mc-body">Use PostgreSQL. SQLite ruled out for multi-writer prod workload.</span><br>
-<span class="mc-body">MongoDB rejected — relational joins are load-bearing for reporting.</span><br>
-<span class="mc-body">See architecture.md for data-layer context.</span><br>
-<br>
-<span class="mc-sec">## timeline</span><br>
-<span class="mc-dim">- time: 2026-06-22T14:30</span><br>
-<span class="mc-dim">&nbsp;&nbsp;kind: decision</span><br>
-<span class="mc-dim">&nbsp;&nbsp;summary: Chose Postgres after eval of three options</span><br>
-<span class="mc-dim">&nbsp;&nbsp;source: internal-db-eval</span><br>
-<span class="mc-dim">&nbsp;&nbsp;affects: [architecture, stack]</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ── Why section ── -->
 <section class="section" aria-labelledby="why-heading">
   <p class="section-label">Why BRAIN.md</p>
 
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="why-heading">Not a README.<br>Not a memory dump.</h2>
+      <h2 class="section-heading" id="why-heading">Your README is for humans.<br>Your brain is for decisions.</h2>
       <p class="section-body">
-        Every project already has a <code class="inline">README.md</code> for humans
-        and an <code class="inline">AGENTS.md</code> for AI coding tools.
-        Neither stores <em>why</em> decisions were made.
+        <code class="inline">README.md</code> is for humans.
+        <code class="inline">AGENTS.md</code> tells AI how to work in your repo.
+        Neither remembers <em>why</em> you decided things — that's what the brain holds:
+        the decisions you'd otherwise re-explain in every new chat.
       </p>
       <p class="section-body">
         A project brain stores <strong>decision-grade knowledge</strong> —
@@ -260,6 +248,8 @@
 </section>
 
 
+
+
 <!-- ── Structure section ── -->
 <section class="section" aria-labelledby="structure-heading">
   <p class="section-label">Structure</p>
@@ -282,27 +272,26 @@
       </p>
     </div>
 
-    <div class="mock-window">
-      <div class="mock-titlebar">
-        <div class="mock-dot"></div>
-        <div class="mock-dot"></div>
-        <div class="mock-dot"></div>
-        <span class="mock-filename">my-project/</span>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot ui-window__dot--red"></span>
+        <span class="ui-window__dot ui-window__dot--yellow"></span>
+        <span class="ui-window__dot ui-window__dot--green"></span>
+        <span class="ui-window__title">my-project/</span>
       </div>
-      <div class="mock-tree" style="padding: 16px 20px; line-height: 1.9; white-space: pre; overflow-x: auto;">my-project/
-<span class="indent">├── <span style="color:#79c0ff;font-weight:500">BRAIN.md</span>             <span style="color:#777">← protocol entry point</span></span>
+      <div class="ui-window__body tree-body">my-project/
+<span class="indent">├── <span class="tree-hi">BRAIN.md</span>             <span class="tree-cm">← protocol entry point</span></span>
 <span class="indent">└── brain/</span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">index.md</span>         <span style="color:#777">← generated by reindex</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">background.md</span>    <span style="color:#777">← why this project exists</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">architecture.md</span>  <span style="color:#777">← system shape &amp; modules</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">flow.md</span>          <span style="color:#777">← key end-to-end flows</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">mindmap.md</span>       <span style="color:#777">← feature mindmap</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">stack.md</span>         <span style="color:#777">← technology choices</span></span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">roadmap.md</span>       <span style="color:#777">← milestones &amp; sequencing</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">index.md</span>         <span class="tree-cm">← generated by reindex</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">background.md</span>    <span class="tree-cm">← why this project exists</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">architecture.md</span>  <span class="tree-cm">← system shape &amp; modules</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">flow.md</span>          <span class="tree-cm">← key end-to-end flows</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">mindmap.md</span>       <span class="tree-cm">← feature mindmap</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">stack.md</span>         <span class="tree-cm">← technology choices</span></span>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;├── <span class="active">roadmap.md</span>       <span class="tree-cm">← milestones &amp; sequencing</span></span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;└── pages/</span>
 <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── db-choice.md</span>
-<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── auth-strategy.md</span>
-      </div>
+<span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── auth-strategy.md</span></div>
     </div>
   </div>
 </section>
@@ -341,9 +330,14 @@
       </p>
     </div>
 
-    <div class="frontmatter-block">
-      <div class="fm-header">pages/auth-strategy.md</div>
-      <div class="fm-body"><span class="fm-comment">---</span>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot ui-window__dot--red"></span>
+        <span class="ui-window__dot ui-window__dot--yellow"></span>
+        <span class="ui-window__dot ui-window__dot--green"></span>
+        <span class="ui-window__title">pages/auth-strategy.md</span>
+      </div>
+      <div class="ui-window__body fm-body"><span class="fm-comment">---</span>
 <span class="fm-key">id:</span>       <span class="fm-val">auth-strategy</span>
 <span class="fm-key">title:</span>    <span class="fm-val">Authentication Strategy</span>
 <span class="fm-key">category:</span> <span class="fm-val">decision</span>
@@ -431,7 +425,7 @@
         <span class="hi">Authoritative decisions only</span>
       </div>
       <div class="feat-card-title">Decision-Grade</div>
-      <div class="feat-card-desc">Stores conclusions that are reviewed and authoritative enough to guide code generation — not a memory dump or log of observations.</div>
+      <div class="feat-card-desc">Holds the reviewed decisions you'd otherwise repeat to your AI every time — not a memory dump or a log of every observation.</div>
     </div>
 
     <div class="feat-card">
@@ -450,106 +444,30 @@
 </section>
 
 
-<!-- ── Toolkit / CLI section ── -->
-<section class="section" aria-labelledby="toolkit-heading">
-  <p class="section-label">The Toolkit</p>
-  <div class="two-col">
-    <div>
-      <h2 class="section-heading" id="toolkit-heading">Install once.<br>Brain in any project.</h2>
-      <p class="section-body">
-        This is an install-first toolkit, not a brain itself. Run
-        <code class="inline">./setup</code> once to symlink the skills into every
-        detected agent — currently Claude Code
-        (<code class="inline">~/.claude/skills</code>) and Codex
-        (<code class="inline">~/.codex/skills</code>).
-      </p>
-      <p class="section-body">
-        Then run <code class="inline">brain-setup</code> in any project: it scaffolds
-        <code class="inline">BRAIN.md</code> and the <code class="inline">brain/</code>
-        skeleton, and wires <code class="inline">CLAUDE.md</code> /
-        <code class="inline">AGENTS.md</code> to the protocol.
-        <code class="inline">brain-bootstrap</code> then seeds real knowledge from
-        your code, docs, and <code class="inline">git log</code> — or an interview.
-      </p>
-      <p class="section-body mb-6">
-        Four skills do the work: <code class="inline">brain-setup</code>,
-        <code class="inline">brain-bootstrap</code>,
-        <code class="inline">brain-page</code> (carries the CLI), and
-        <code class="inline">brain-ingest</code>.
-      </p>
-    </div>
+<!-- ── Get Started ── -->
+<section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
+  <p class="section-label">Get Started</p>
+  <h2 class="section-heading" id="get-started-heading">Give your AI agents a brain.</h2>
+  <div class="ui-window code-block"><span class="cm"># 1. clone &amp; install once (global)</span>
+<span class="kw">git clone</span> https://github.com/mindmuxai/brain.md
+<span class="kw">cd</span> brain.md &amp;&amp; <span class="kw">./setup</span>
+<span class="dim">→ installed 4 skills into ~/.claude/skills</span>
 
-    <div class="code-block"><span class="cm"># 1. install the tools once (global)</span>
-<span class="kw">./setup</span>
-
-<span class="cm"># 2. ask your agent to run the skills</span>
-<span class="cm"># /brain-setup  → scaffolds BRAIN.md + brain/</span>
-<span class="cm"># /brain-bootstrap → seeds from code + git</span>
+<span class="cm"># 2. scaffold + seed in any project</span>
+<span class="prompt">/</span><span class="hi">brain-setup</span>      <span class="cm"># creates BRAIN.md + brain/</span>
+<span class="prompt">/</span><span class="hi">brain-bootstrap</span>  <span class="cm"># seeds from code + git log</span>
 
 <span class="cm"># 3. wire the brain CLI</span>
 brain() { node skills/brain-page/bin/brain.mjs <span class="str">"$@"</span>; }
 
-<span class="cm"># 4. read &amp; write only through the CLI</span>
+<span class="cm"># 4. read &amp; write through the CLI</span>
 brain <span class="str">ls</span>
 brain <span class="str">cat</span> db-choice
-brain <span class="str">create-page</span> --id db-choice \
-  --category decision --title <span class="str">"Use Postgres"</span>
-echo <span class="str">"the new understanding"</span> \
-  | brain <span class="str">update-truth</span> --id db-choice \
-      --summary <span class="str">"why it changed"</span>
+brain <span class="str">update-truth</span> --id db-choice \
+  --summary <span class="str">"why it changed"</span>
 brain <span class="str">reindex</span> &amp;&amp; brain <span class="str">lint-links</span></div>
+
   </div>
-</section>
-
-<!-- ── CTA ── -->
-<section class="cta-wrap" aria-labelledby="get-started-heading">
-    <p class="section-label">Get Started</p>
-    <h2 class="section-heading" id="get-started-heading">Give your AI agents a brain.</h2>
-    <div class="steps-grid" style="text-align:left;margin-top:24px;">
-
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Clone the toolkit</div>
-          <div class="step-desc">Download once — the toolkit lives on your machine, not inside any single project.</div>
-          <div class="step-code"><span class="prompt">$</span> <span class="hi">git clone https://github.com/mindmuxai/brain.md</span>
-<span class="prompt">$</span> <span class="hi">cd brain.md</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Install globally</div>
-          <div class="step-desc">Symlinks the four skills into every detected agent — Claude Code, Codex, and any compatible agent.</div>
-          <div class="step-code"><span class="prompt">$</span> <span class="hi">./setup</span>
-<span class="dim">→ installed 4 skills into ~/.claude/skills</span>
-<span class="dim">→ installed 4 skills into ~/.codex/skills</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Scaffold a project brain</div>
-          <div class="step-desc">Open your project in your coding agent and run the setup skill. It creates <code class="inline">BRAIN.md</code> and the <code class="inline">brain/</code> skeleton.</div>
-          <div class="step-code"><span class="dim"># In your coding agent (Claude Code, Codex…)</span>
-<span class="prompt">/</span><span class="hi">brain-setup</span></div>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Seed knowledge</div>
-          <div class="step-desc">Bootstrap reads your code, docs, and git log to fill the brain with real decisions — or runs an interview to capture them.</div>
-          <div class="step-code"><span class="prompt">/</span><span class="hi">brain-bootstrap</span>
-<span class="dim">→ reads code + git log</span>
-<span class="dim">→ writes structured pages into brain/</span></div>
-        </div>
-      </div>
-
-    </div>
 </section>
 
 <!-- ── FAQ Section ── -->
