@@ -563,7 +563,7 @@ html.dark .hero-icon {
 .code-block {
   background: #141414;
   border: 1px solid #2a2a2a;
-  padding: 20px 24px;
+  padding: 16px;
   line-height: 1.7;
   color: #bbb;
   overflow-x: auto;
