@@ -843,8 +843,8 @@ code.inline {
 
 
 .ui-window {
-  --window-bg: #0d0d0d;
-  --window-titlebar: #1e1e1e;
+  --window-bg: #171717;
+  --window-titlebar: #171717;
   --window-border: #2a2a2a;
   --window-muted: #6b6b6b;
   --window-text: #b3b3b3;
