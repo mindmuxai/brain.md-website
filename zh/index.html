@@ -110,10 +110,18 @@
       },
       {
         "@type": "Question",
-          "name": "为什么要分离 compiled_truth 和 timeline？",
+        "name": "为什么要分离 compiled_truth 和 timeline？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "compiled_truth 记录某个主题当前最可靠的理解。timeline 记录形成该理解的证据、决策、反转和备注。二者分离后，代理可以快速读取当前答案，同时在需要审计时保留推理历史。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "目前支持哪些 Agent 平台？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "目前已支持 Claude Code 和 Codex，更多平台正在陆续开发中。"
         }
       }
     ]
