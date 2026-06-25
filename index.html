@@ -115,6 +115,14 @@
           "@type": "Answer",
           "text": "compiled_truth records the current best understanding of a topic. timeline records the evidence, decisions, reversals, and notes that led there. The split lets agents read the current answer quickly while preserving the reasoning history when they need to audit it."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Which agent platforms are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Claude Code and Codex are supported today. More platforms are on the way."
+        }
       }
     ]
   }
@@ -131,7 +139,7 @@
     </div>
 
     <h1 class="hero-title"><code>BRAIN.md</code> <span class="sr-only">— A persistent memory layer for your projects</span></h1>
-    <p class="hero-tagline">Your AI forgets everything the moment you close the tab — <code class="inline">BRAIN.md</code> gives it a memory that actually persists.</p>
+    <p class="hero-tagline">Your AI forgets everything — unless you give it a brain.</p>
 
     <div class="hero-contrast">
 
@@ -170,7 +178,7 @@
 
     </div>
 
-    <p class="hero-ownership">Your brain is a local Markdown folder. It's yours. Git it, move it, read it with any tool.</p>
+    <p class="hero-ownership"><code class="inline">BRAIN.md</code> is a local Markdown folder. It's yours. Git it, move it, read it with any tool.</p>
 
     <div class="hero-actions">
       <a href="#get-started" class="btn-primary">Get started</a>
@@ -461,15 +469,15 @@
 <span class="window-muted">→ installed 4 skills into ~/.claude/skills</span>
 
 <span class="window-muted"># 2. scaffold + seed in any project</span>
-<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># creates BRAIN.md + brain/</span>
+<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># creates BRAIN.md + brain/, wires agent configs</span>
 <span class="window-muted">/</span><span class="window-key">brain-bootstrap</span>  <span class="window-muted"># seeds from code + git log</span>
 
 <span class="window-muted"># 3. wire the brain CLI</span>
 brain() { node skills/brain-page/bin/brain.mjs <span class="window-string">"$@"</span>; }
 
 <span class="window-muted"># 4. read &amp; write through the CLI</span>
-brain <span class="window-string">ls</span>
-brain <span class="window-string">cat</span> db-choice
+brain <span class="window-string">list-pages</span>
+brain <span class="window-string">read-page</span> db-choice
 brain <span class="window-string">update-truth</span> --id db-choice --summary <span class="window-string">"why it changed"</span>
 brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="window-string">lint-links</span></div>
   </div>
@@ -505,6 +513,13 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
       <summary class="faq-q">Why does it separate compiled_truth and timeline?</summary>
       <p class="faq-a">
         <code class="inline">compiled_truth</code> records the current best understanding of a topic. <code class="inline">timeline</code> records the evidence, decisions, reversals, and notes that led there. The split lets agents read the current answer quickly while preserving the reasoning history when they need to audit it.
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Which agent platforms are supported?</summary>
+      <p class="faq-a">
+        Claude Code and Codex are supported today. More platforms are on the way.
       </p>
     </details>
   </div>

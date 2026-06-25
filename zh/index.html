@@ -110,10 +110,18 @@
       },
       {
         "@type": "Question",
-          "name": "为什么要分离 compiled_truth 和 timeline？",
+        "name": "为什么要分离 compiled_truth 和 timeline？",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "compiled_truth 记录某个主题当前最可靠的理解。timeline 记录形成该理解的证据、决策、反转和备注。二者分离后，代理可以快速读取当前答案，同时在需要审计时保留推理历史。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "目前支持哪些 Agent 平台？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "目前已支持 Claude Code 和 Codex，更多平台正在陆续开发中。"
         }
       }
     ]
@@ -131,7 +139,7 @@
     </div>
 
     <h1 class="hero-title"><code>BRAIN.md</code> <span class="sr-only">— 为你的项目提供持久记忆层</span></h1>
-    <p class="hero-tagline">每次关掉对话窗口，AI 就失忆了——<code class="inline">BRAIN.md</code> 让它拥有真正留得住的记忆。</p>
+    <p class="hero-tagline">AI 会忘掉一切——除非你给它一个大脑。</p>
 
     <div class="hero-contrast">
 
@@ -170,7 +178,7 @@
 
     </div>
 
-    <p class="hero-ownership">你的大脑就是本地的一个 Markdown 文件夹，完全属于你。可以 Git 管理、随处迁移、用任何工具直接阅读。</p>
+    <p class="hero-ownership"><code class="inline">BRAIN.md</code> 就是本地的一个 Markdown 文件夹，完全属于你。可以 Git 管理、随处迁移、用任何工具直接阅读。</p>
 
     <div class="hero-actions">
       <a href="#get-started" class="btn-primary">立即上手</a>
@@ -459,15 +467,15 @@
 <span class="window-muted">→ 已安装 4 个技能到 ~/.claude/skills</span>
 
 <span class="window-muted"># 2. 在任意项目中搭建并播种</span>
-<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># 创建 BRAIN.md + brain/</span>
+<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># 创建 BRAIN.md + brain/，接入 agent 配置</span>
 <span class="window-muted">/</span><span class="window-key">brain-bootstrap</span>  <span class="window-muted"># 从代码和 git log 播种知识</span>
 
 <span class="window-muted"># 3. 接入 brain CLI</span>
 brain() { node skills/brain-page/bin/brain.mjs <span class="window-string">"$@"</span>; }
 
 <span class="window-muted"># 4. 只通过 CLI 读写</span>
-brain <span class="window-string">ls</span>
-brain <span class="window-string">cat</span> db-choice
+brain <span class="window-string">list-pages</span>
+brain <span class="window-string">read-page</span> db-choice
 brain <span class="window-string">update-truth</span> --id db-choice --summary <span class="window-string">"为什么改变了"</span>
 brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="window-string">lint-links</span></div>
   </div>
@@ -503,6 +511,13 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
       <summary class="faq-q">为什么要分离 compiled_truth 和 timeline？</summary>
       <p class="faq-a">
         <code class="inline">compiled_truth</code> 记录某个主题当前最可靠的理解。<code class="inline">timeline</code> 记录形成该理解的证据、决策、反转和备注。二者分离后，代理可以快速读取当前答案，同时在需要审计时保留推理历史。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">目前支持哪些 Agent 平台？</summary>
+      <p class="faq-a">
+        目前已支持 Claude Code 和 Codex，更多平台正在陆续开发中。
       </p>
     </details>
   </div>
