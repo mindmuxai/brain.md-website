@@ -379,11 +379,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim"># no service, no MCP server</span><br>
-        <span class="dim"># no npm install</span><br>
-        <br>
-        <span class="prompt">$</span> <span class="hi">node brain.mjs ls</span><br>
-        <span class="dim">runs on plain Node — zero deps</span>
+        <div class="feat-card-media__body">
+          <span class="dim"># no service, no MCP server</span><br>
+          <span class="dim"># no npm install</span><br>
+          <br>
+          <span class="prompt">$</span> <span class="hi">node brain.mjs ls</span><br>
+          <span class="dim">runs on plain Node — zero deps</span>
+        </div>
       </div>
       <div class="feat-card-title">Zero Dependencies</div>
       <div class="feat-card-desc">No npm install, no runtime service, no background daemon. One zero-dependency reference CLI, run with <code class="inline">node</code>. The brain ships in your repo.</div>
@@ -391,10 +393,12 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="prompt">$</span> <span class="hi">brain update-truth --id db-choice</span><br>
-        <span class="dim">↳ rewrites compiled_truth</span><br>
-        <span class="dim">↳ appends timeline entry</span><br>
-        <span class="dim">  …in one atomic write</span>
+        <div class="feat-card-media__body">
+          <span class="prompt">$</span> <span class="hi">brain update-truth --id db-choice</span><br>
+          <span class="dim">↳ rewrites compiled_truth</span><br>
+          <span class="dim">↳ appends timeline entry</span><br>
+          <span class="dim">  …in one atomic write</span>
+        </div>
       </div>
       <div class="feat-card-title">Correct by Construction</div>
       <div class="feat-card-desc">Every read and write goes through the <code class="inline">brain</code> CLI. Mis-shaped frontmatter and trace-less truth rewrites are structurally impossible — so there is no validator to run.</div>
@@ -402,11 +406,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim">$ git log --oneline brain/</span><br>
-        <span class="hi">a3f1c4b</span> decision: chose postgres<br>
-        <span class="hi">8d22e01</span> reversal: dropped redis<br>
-        <span class="hi">f90b3aa</span> evidence: p99 spike<br>
-        <span class="dim">…</span>
+        <div class="feat-card-media__body">
+          <span class="dim">$ git log --oneline brain/</span><br>
+          <span class="hi">a3f1c4b</span> decision: chose postgres<br>
+          <span class="hi">8d22e01</span> reversal: dropped redis<br>
+          <span class="hi">f90b3aa</span> evidence: p99 spike<br>
+          <span class="dim">…</span>
+        </div>
       </div>
       <div class="feat-card-title">Git-Native</div>
       <div class="feat-card-desc">Brain files track in git. The timeline gives human-readable provenance; git diff gives the full record.</div>
@@ -414,11 +420,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim"># architecture.md references:</span><br>
-        <span class="hi">[[db-choice]]</span><br>
-        <span class="hi">[[auth-strategy]]</span><br>
-        <br>
-        <span class="dim">$ brain lint-links ✓</span>
+        <div class="feat-card-media__body">
+          <span class="dim"># architecture.md references:</span><br>
+          <span class="hi">[[db-choice]]</span><br>
+          <span class="hi">[[auth-strategy]]</span><br>
+          <br>
+          <span class="dim">$ brain lint-links ✓</span>
+        </div>
       </div>
       <div class="feat-card-title">Wiki-Link Cross-Refs</div>
       <div class="feat-card-desc">Pages link with <code class="inline">[[page-id]]</code> syntax. IDs match frontmatter exactly, and <code class="inline">lint-links</code> confirms every reference resolves.</div>
@@ -426,11 +434,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim">## compiled_truth</span><br>
-        <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
-        <span class="dim">NOT a raw note dump</span><br>
-        <span class="dim">NOT a vector index</span><br>
-        <span class="hi">Authoritative decisions only</span>
+        <div class="feat-card-media__body">
+          <span class="dim">## compiled_truth</span><br>
+          <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
+          <span class="dim">NOT a raw note dump</span><br>
+          <span class="dim">NOT a vector index</span><br>
+          <span class="hi">Authoritative decisions only</span>
+        </div>
       </div>
       <div class="feat-card-title">Decision-Grade</div>
       <div class="feat-card-desc">Holds the reviewed decisions you'd otherwise repeat to your AI every time — not a memory dump or a log of every observation.</div>
@@ -438,11 +448,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="hi">Claude Code</span> · <span class="hi">Codex</span><br>
-        any agent that reads files<br>
-        <br>
-        <span class="dim">4 installable skills,</span><br>
-        <span class="dim">shared across agents</span>
+        <div class="feat-card-media__body">
+          <span class="hi">Claude Code</span> · <span class="hi">Codex</span><br>
+          any agent that reads files<br>
+          <br>
+          <span class="dim">4 installable skills,</span><br>
+          <span class="dim">shared across agents</span>
+        </div>
       </div>
       <div class="feat-card-title">Agent-Agnostic</div>
       <div class="feat-card-desc">An open standard with neutral naming. Four skills install once and work with Claude Code, Codex, and any file-reading agent. No vendor lock-in.</div>

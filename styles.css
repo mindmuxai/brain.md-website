@@ -494,7 +494,7 @@ html.dark .hero-icon {
 }
 
 .hero-title code {
-  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', monospace;
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: 38px;
 }
 
@@ -542,7 +542,7 @@ html.dark .hero-icon {
 }
 
 .compare-table td:first-child {
-  font-family: 'Geist Mono', 'SF Mono', monospace;
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: 12px;
   white-space: nowrap;
   padding-right: 24px;
@@ -587,29 +587,52 @@ html.dark .hero-icon {
   overflow: hidden;
 }
 
-.feat-card-media {
-  background: #141414;
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  margin-bottom: 16px;
-  font-family: 'Geist Mono', 'SF Mono', monospace;
-  font-size: 12px;
-  line-height: 1.65;
-  color: #888;
-  height: 120px;
-  overflow: hidden;
-}
-
 html.dark .feat-card {
   background: var(--gray-300);
 }
 
-html.dark .feat-card-media {
-  background: var(--background-100);
+.feat-card-media {
+  --window-bg: #171717;
+  --window-border: #2a2a2a;
+  --window-muted: #6b6b6b;
+  --window-text: #b3b3b3;
+  --window-text-strong: #e5e5e5;
+  background: var(--window-bg);
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-md);
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--window-muted);
+  margin-bottom: 16px;
 }
 
-.feat-card-media .hi  { color: #d0d0d0; }
-.feat-card-media .dim { color: #666; opacity: 1; }
+.feat-card-media__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--window-bg);
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--window-border);
+}
+
+.feat-card-media__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.feat-card-media__dot:nth-child(1) { background: #ff5f57; }
+.feat-card-media__dot:nth-child(2) { background: #febc2e; }
+.feat-card-media__dot:nth-child(3) { background: #28c840; }
+
+.feat-card-media__body {
+  padding: 10px 12px;
+}
+
+.feat-card-media .hi  { color: var(--window-text-strong); }
+.feat-card-media .dim { color: var(--window-muted); opacity: 1; }
 .feat-card-media .prompt { color: #777; }
 
 .feat-card-title {
@@ -683,7 +706,7 @@ footer {
 }
 
 .footer-logo {
-  font-family: 'Geist Mono', 'SF Mono', monospace;
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: 13px;
   font-weight: 500;
   color: var(--ink);
@@ -722,7 +745,7 @@ footer {
 
 /* ── Inline code ── */
 code.inline {
-  font-family: 'Geist Mono', 'SF Mono', monospace;
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: .875em;
   background: var(--chip);
   padding: 1px 5px;
@@ -856,7 +879,7 @@ code.inline {
   border-radius: var(--radius-md);
   border: 1px solid var(--window-border);
   box-shadow: 0 4px 24px rgba(0,0,0,0.35);
-  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', monospace;
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: 13px;
   background: var(--window-bg);
   overflow: hidden;
