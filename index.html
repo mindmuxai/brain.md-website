@@ -192,13 +192,42 @@
 
 <main>
 
+<!-- ── Workflow section ── -->
+<section class="section" aria-labelledby="workflow-heading">
+  <h2 class="section-heading mb-6" id="workflow-heading">How it Works</h2>
+
+  <div class="workflow-row">
+    <div class="workflow-step">
+      <div class="workflow-step__title">1. Chat</div>
+      <div class="workflow-step__desc">You work through a problem with an agent — trade-offs, constraints, what to do next.</div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">
+      <span class="workflow-arrow__label">compile</span>
+      <span class="workflow-arrow__glyph">→</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step__title">2. Brain</div>
+      <div class="workflow-step__desc"><code class="inline">brain update-truth</code> atomically rewrites <code class="inline">compiled_truth</code> and appends a <code class="inline">timeline</code> entry.</div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">
+      <span class="workflow-arrow__label">resume</span>
+      <span class="workflow-arrow__glyph">→</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step__title">3. Task</div>
+      <div class="workflow-step__desc">The next task — any agent, new chat, new machine — reads <code class="inline">brain/</code> first and starts already caught up.</div>
+    </div>
+  </div>
+
+  <p class="workflow-loop">↺ That next task is itself a new chat — which reads the brain and starts the loop again.</p>
+</section>
+
+
 <!-- ── Why section ── -->
 <section class="section" aria-labelledby="why-heading">
-  <p class="section-label">Why BRAIN.md</p>
-
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="why-heading">Your README is for humans.<br>Your brain is for decisions.</h2>
+      <h2 class="section-heading" id="why-heading">Why BRAIN.md</h2>
       <p class="section-body">
         <code class="inline">README.md</code> is for humans.
         <code class="inline">AGENTS.md</code> tells AI how to work in your repo.
@@ -260,10 +289,9 @@
 
 <!-- ── Structure section ── -->
 <section class="section" aria-labelledby="structure-heading">
-  <p class="section-label">Structure</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="structure-heading">Six root pages.<br>Unlimited knowledge pages.</h2>
+      <h2 class="section-heading" id="structure-heading">Structure</h2>
       <p class="section-body">
         Six fixed root pages cover the project-wide views — background, architecture,
         flow, mindmap, stack, and roadmap. They are only ever updated, never created,
@@ -307,10 +335,9 @@
 
 <!-- ── Page format section ── -->
 <section class="section" aria-labelledby="page-format-heading">
-  <p class="section-label">Page Format</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="page-format-heading">compiled_truth +<br>append-only timeline.</h2>
+      <h2 class="section-heading" id="page-format-heading">Page Format</h2>
       <p class="section-body">
         Every page in <code class="inline">pages/</code> has two sections.
         <strong>compiled_truth</strong> is
@@ -372,8 +399,7 @@
 
 <!-- ── Feature cards ── -->
 <section class="section" aria-labelledby="features-heading">
-  <p class="section-label">Features</p>
-  <h2 class="section-heading mb-6" id="features-heading">Everything a reasoning agent needs.</h2>
+  <h2 class="section-heading mb-6" id="features-heading">Features</h2>
 
   <div class="feat-grid">
 
@@ -466,8 +492,7 @@
 
 <!-- ── Get Started ── -->
 <section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
-  <p class="section-label">Get Started</p>
-  <h2 class="section-heading" id="get-started-heading">Give your AI agents a brain.</h2>
+  <h2 class="section-heading" id="get-started-heading">Get Started</h2>
   <div class="ui-window ui-window--terminal">
     <div class="ui-window__titlebar">
       <span class="ui-window__dot"></span>
@@ -499,8 +524,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
 
 <!-- ── FAQ Section ── -->
 <section class="section" aria-labelledby="faq-heading">
-  <p class="section-label">FAQ</p>
-  <h2 class="section-heading" id="faq-heading">Frequently Asked Questions</h2>
+  <h2 class="section-heading" id="faq-heading">FAQ</h2>
   
   <div class="faq-list">
     <details class="faq-item">
@@ -542,7 +566,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
 <footer>
   <div class="footer-left">
     <a href="/" class="footer-logo">BRAIN.md</a>
-    <span class="footer-meta">maintained by <a href="https://mindmux.ai" target="_blank" rel="noopener">the MindMux team</a>. Inspired by <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki</a> and <a href="https://github.com/garrytan/gbrain" target="_blank" rel="noopener">GBrain</a>.</span>
+    <span class="footer-meta">Maintained by <a href="https://mindmux.ai" target="_blank" rel="noopener">the MindMux team</a>. Inspired by <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki</a> and <a href="https://github.com/garrytan/gbrain" target="_blank" rel="noopener">GBrain</a>.</span>
   </div>
   <div class="footer-right">
     <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>

@@ -192,13 +192,42 @@
 
 <main>
 
+<!-- ── Workflow section ── -->
+<section class="section" aria-labelledby="workflow-heading">
+  <h2 class="section-heading mb-6" id="workflow-heading">工作原理</h2>
+
+  <div class="workflow-row">
+    <div class="workflow-step">
+      <div class="workflow-step__title">1. 对话</div>
+      <div class="workflow-step__desc">你和 agent 一起理清一个问题——权衡、约束、下一步怎么做。</div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">
+      <span class="workflow-arrow__label">编译</span>
+      <span class="workflow-arrow__glyph">→</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step__title">2. 大脑</div>
+      <div class="workflow-step__desc"><code class="inline">brain update-truth</code> 原子性地重写 <code class="inline">compiled_truth</code>，并追加一条 <code class="inline">timeline</code> 记录。</div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">
+      <span class="workflow-arrow__label">读取</span>
+      <span class="workflow-arrow__glyph">→</span>
+    </div>
+    <div class="workflow-step">
+      <div class="workflow-step__title">3. 任务</div>
+      <div class="workflow-step__desc">下一个任务——任意 agent、新对话、甚至新机器——先读取 <code class="inline">brain/</code>，一上来就已经掌握全部背景。</div>
+    </div>
+  </div>
+
+  <p class="workflow-loop">↺ 下一个任务本身就是一次新对话——它会先读大脑，让循环重新开始。</p>
+</section>
+
+
 <!-- ── Why section ── -->
 <section class="section" aria-labelledby="why-heading">
-  <p class="section-label">为什么是 BRAIN.md</p>
-
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="why-heading">README 是给人看的。<br>大脑是用来记决策的。</h2>
+      <h2 class="section-heading" id="why-heading">为什么是 BRAIN.md</h2>
       <p class="section-body">
         <code class="inline">README.md</code> 面向人类。
         <code class="inline">AGENTS.md</code> 告诉 AI 如何在仓库里干活。
@@ -258,10 +287,9 @@
 
 <!-- ── Structure section ── -->
 <section class="section" aria-labelledby="structure-heading">
-  <p class="section-label">结构</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="structure-heading">六个根页面。<br>无限知识页面。</h2>
+      <h2 class="section-heading" id="structure-heading">结构</h2>
       <p class="section-body">
         六个固定根页面覆盖项目级视角：背景、架构、
         流程、思维导图、技术栈和路线图。它们只会被更新，不会被重复创建，
@@ -305,10 +333,9 @@
 
 <!-- ── Page format section ── -->
 <section class="section" aria-labelledby="page-format-heading">
-  <p class="section-label">页面格式</p>
   <div class="two-col">
     <div>
-      <h2 class="section-heading" id="page-format-heading">compiled_truth +<br>只追加的 timeline。</h2>
+      <h2 class="section-heading" id="page-format-heading">页面格式</h2>
       <p class="section-body">
         <code class="inline">pages/</code> 中的每个页面都有两个部分。
         <strong>compiled_truth</strong> 是当前的权威答案——
@@ -370,8 +397,7 @@
 
 <!-- ── Feature cards ── -->
 <section class="section" aria-labelledby="features-heading">
-  <p class="section-label">特性</p>
-  <h2 class="section-heading mb-6" id="features-heading">推理代理所需的一切。</h2>
+  <h2 class="section-heading mb-6" id="features-heading">特性</h2>
 
   <div class="feat-grid">
 
@@ -452,8 +478,7 @@
 
 <!-- ── Get Started ── -->
 <section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
-  <p class="section-label">开始使用</p>
-  <h2 class="section-heading" id="get-started-heading">给你的 AI 代理一个大脑。</h2>
+  <h2 class="section-heading" id="get-started-heading">开始使用</h2>
   <div class="ui-window ui-window--terminal">
     <div class="ui-window__titlebar">
       <span class="ui-window__dot"></span>
@@ -485,7 +510,6 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
 
 <!-- ── FAQ Section ── -->
 <section class="section" aria-labelledby="faq-heading">
-  <p class="section-label">FAQ</p>
   <h2 class="section-heading" id="faq-heading">常见问题</h2>
 
   <div class="faq-list">

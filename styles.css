@@ -424,15 +424,6 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   font-size: 12px;
 }
 
-/* ── Section labels ── */
-.section-label {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
 .section-heading {
   font-size: 24px;
   font-weight: 700;
@@ -478,6 +469,14 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   justify-content: center;
   margin: 0 auto 24px;
   overflow: hidden;
+}
+
+.hero-icon img {
+  display: block;
+}
+
+.hero-icon:hover img {
+  content: url("/icon-animated.svg");
 }
 
 html.dark .hero-icon {
@@ -648,6 +647,67 @@ html.dark .feat-card {
   line-height: 1.55;
 }
 
+/* ── Workflow section ── */
+.workflow-row {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.workflow-step {
+  flex: 1;
+  min-width: 0;
+  background: var(--chip);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+html.dark .workflow-step {
+  background: var(--gray-300);
+}
+
+.workflow-step__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.workflow-step__desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.workflow-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 56px;
+  flex-shrink: 0;
+}
+
+.workflow-arrow__label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.workflow-arrow__glyph {
+  color: var(--gray-600);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.workflow-loop {
+  margin-top: 24px;
+}
+
 /* ── Page format block ── */
 .ui-window .fm-body {
   display: block;
@@ -699,16 +759,16 @@ footer {
 
 .footer-left {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  /* gap: 4px; */
   min-width: 0;
 }
 
 .footer-logo {
   font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--ink);
   text-decoration: none;
 }
@@ -744,6 +804,10 @@ footer {
 .footer-link:hover { color: var(--ink); }
 
 /* ── Inline code ── */
+code {
+  font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
+}
+
 code.inline {
   font-family: 'Geist Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
   font-size: .875em;
@@ -828,6 +892,9 @@ code.inline {
   .hero-title code { font-size: 30px; }
   .section-heading { font-size: 20px; line-height: 26px; }
   .hero-contrast   { flex-direction: column; gap: 16px; }
+  .workflow-row    { flex-direction: column; }
+  .workflow-arrow  { flex-direction: row; width: auto; gap: 6px; padding: 4px 0; }
+  .workflow-arrow__glyph { transform: rotate(90deg); }
 }
 
 @media (max-width: 540px) {

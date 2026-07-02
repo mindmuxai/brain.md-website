@@ -11,12 +11,10 @@
 #brain {
   transform-origin: 0 0;
   transform: translate(45px, 45px) rotate(-3.142rad) translate(-45px, -45px);
-}
-svg:hover #brain {
   animation: kf_brain_transform_0 1s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  svg:hover #brain {
+  #brain {
     animation: none;
   }
 }
