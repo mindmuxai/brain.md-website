@@ -2,34 +2,26 @@
 <style>
 @keyframes kf_brain_transform_0 {
   0% {
-    transform: translate(45px, 45px) rotate(-3.142rad) translate(-45px, -45px);
+    transform: translate(45px, 45px) rotate(-1.571rad) translate(-45px, -45px);
   }
   100% {
-    transform: translate(45px, 45px) rotate(-1.571rad) translate(-45px, -45px);
+    transform: translate(45px, 45px) rotate(0rad) translate(-45px, -45px);
   }
 }
 #brain {
   transform-origin: 0 0;
-  transform: translate(45px, 45px) rotate(-3.142rad) translate(-45px, -45px);
-}
-svg:hover #brain {
   animation: kf_brain_transform_0 1s linear infinite;
 }
-@media (prefers-reduced-motion: reduce) {
-  svg:hover #brain {
-    animation: none;
-  }
-}
 </style>
-<g id="logo">
-<g clip-path="url(#clip0_8_41)">
-<rect width="128" height="128" rx="128" id="logo_bg_0" fill="#171717">
+<g id="icon">
+<g clip-path="url(#clip0_1_26)">
+<rect width="128" height="128" rx="128" id="icon_bg_0" fill="#171717">
 </rect>
 <g id="Group_4" transform="translate(19 12)">
-<mask id="mask0_8_41" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+<mask id="mask0_1_26" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
 <rect id="musk" width="90" height="45" fill="#171717"/>
 </mask>
-<g mask="url(#mask0_8_41)">
+<g mask="url(#mask0_1_26)">
 <g id="brain">
 <rect id="Rectangle_1" transform="translate(0 39)" width="90" height="12" rx="8" fill="white"/>
 <rect id="Rectangle_2" transform="matrix(0 -1 1 0 39 90)" width="90" height="12" rx="8" fill="white"/>
@@ -43,7 +35,7 @@ svg:hover #brain {
 </g>
 </g>
 <defs>
-<clipPath id="clip0_8_41">
+<clipPath id="clip0_1_26">
 <rect width="128" height="128" rx="128" fill="white"/>
 </clipPath>
 </defs>

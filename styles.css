@@ -475,9 +475,9 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   display: block;
 }
 
-.hero-icon:hover img {
+/* .hero-icon:hover img {
   content: url("/icon-animated.svg");
-}
+} */
 
 html.dark .hero-icon {
   border: 1px solid var(--gray-alpha-400);
