@@ -117,7 +117,7 @@
   /* ── Semantic aliases ── */
   --paper: var(--background-100);
   --ink: var(--gray-1000);
-  --muted: var(--gray-800);
+  --muted: var(--gray-900);
   --chip: var(--gray-100);
   --border: var(--gray-200);
   --hover: var(--gray-100);
@@ -290,8 +290,8 @@ body {
   background: var(--background-100);
   border: 1px solid var(--gray-alpha-400);
   border-radius: var(--radius-full);
-  padding: 0 10px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   color: var(--ink);
   font-family: inherit;
@@ -299,13 +299,12 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: background 120ms ease-out, border-color 120ms ease-out, color 120ms ease-out;
+  justify-content: center;
+  transition: background 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1), border-color 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1), color 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
-/* gray-100 → 200 → 300; borders 400 → 500 → 600 */
-.dark-toggle:hover  { background: var(--gray-200); border-color: var(--gray-alpha-500); color: var(--ink); }
-.dark-toggle:active { background: var(--gray-300); border-color: var(--gray-alpha-600); color: var(--ink); }
+.dark-toggle:hover  { background: var(--gray-100); }
+.dark-toggle:active { background: var(--gray-200); }
 
 .dark-toggle:focus-visible {
   outline: none;
@@ -334,7 +333,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition: opacity 120ms ease-out;
+  transition: opacity 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .btn-primary:hover  { opacity: 0.82; }
@@ -357,9 +356,9 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
+  background: var(--background-100);
   color: var(--ink);
-  border: 1px solid var(--border);
+  border: 1px solid var(--gray-alpha-400);
   border-radius: var(--radius-full);
   padding: 0 24px;
   height: 48px;
@@ -369,7 +368,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 120ms ease-out;
+  transition: background 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .btn-secondary:hover  { background: var(--hover); }
@@ -415,21 +414,21 @@ html.dark .dark-toggle .icon-sun  { display: none; }
 }
 
 .language-switcher-footer {
-  height: 28px;
+  height: 32px;
 }
 
 .language-switcher-footer a {
   min-width: 28px;
-  height: 20px;
+  height: 24px;
   font-size: 12px;
 }
 
 .section-heading {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 32px;
   color: var(--ink);
-  letter-spacing: -1px; 
+  letter-spacing: -0.96px;
   margin-bottom: 24px;
 }
 
@@ -450,7 +449,7 @@ html.dark .dark-toggle .icon-sun  { display: none; }
 
 /* ── Hero ── */
 .hero {
-  padding: 80px 40px 56px;
+  padding: 64px 40px;
   max-width: 1040px;
   margin: 0 auto;
 }
@@ -485,8 +484,8 @@ html.dark .hero-icon {
 
 .hero-title {
   font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -2px;
+  font-weight: 600;
+  letter-spacing: -2.4px;
   line-height: 48px;
   color: var(--ink);
   margin-bottom: 16px;
@@ -636,7 +635,9 @@ html.dark .feat-card {
 
 .feat-card-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.28px;
   color: var(--ink);
   margin-bottom: 4px;
 }
@@ -659,7 +660,7 @@ html.dark .feat-card {
   min-width: 0;
   background: var(--chip);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 24px;
 }
 
 html.dark .workflow-step {
@@ -668,7 +669,9 @@ html.dark .workflow-step {
 
 .workflow-step__title {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -740,7 +743,7 @@ html.dark .workflow-step {
 .cta-docs a {
   color: var(--muted);
   text-decoration: none;
-  transition: color 120ms ease-out;
+  transition: color 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .cta-docs a:hover { color: var(--ink); }
@@ -798,7 +801,7 @@ footer {
   font-weight: 500;
   color: var(--muted);
   text-decoration: none;
-  transition: color 120ms ease-out;
+  transition: color 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .footer-link:hover { color: var(--ink); }
@@ -863,7 +866,7 @@ code.inline {
   font-weight: 400;
   color: var(--muted);
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .faq-item[open] > .faq-q::after {
