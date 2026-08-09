@@ -1037,6 +1037,18 @@ code.inline {
   white-space: nowrap;
 }
 
+.tw-cursor {
+  display: inline-block;
+  color: var(--window-blue);
+  animation: tw-blink 0.9s steps(1) infinite;
+}
+
+@keyframes tw-blink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .tw-cursor { animation: none; }
+}
+
 .window-muted { color: var(--window-muted); }
 .window-strong { color: var(--window-text-strong); }
 .window-key { color: var(--window-blue); font-weight: 500; }
