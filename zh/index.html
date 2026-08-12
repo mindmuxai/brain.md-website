@@ -44,7 +44,10 @@
     "name": "BRAIN.md",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
-    "downloadUrl": "https://github.com/mindmuxai/brain.md",
+    "softwareVersion": "0.1.0",
+    "downloadUrl": "https://www.npmjs.com/package/@mindmux/brain-md",
+    "installUrl": "https://www.npmjs.com/package/@mindmux/brain-md",
+    "codeRepository": "https://github.com/mindmuxai/brain.md",
     "featureList": "零依赖，Git 原生，结构保证正确，Wiki 链接交叉引用，代理无关",
     "releaseNotes": "https://github.com/mindmuxai/brain.md/releases",
     "offers": {
@@ -121,7 +124,7 @@
         "name": "目前支持哪些 Agent 平台？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "目前已支持 Claude Code 和 Codex，更多平台正在陆续开发中。"
+          "text": "技能可安装到 Claude Code、Codex、Cursor、Pi 和 OpenCode。任何能读取文件的代理都可以通过 BRAIN.md 使用项目大脑。"
         }
       }
     ]
@@ -375,8 +378,8 @@
 <span class="window-key">title:</span>    <span class="window-string">Authentication Strategy</span>
 <span class="window-key">category:</span> <span class="window-string">decision</span>
 <span class="window-key">status:</span>   <span class="window-string">active</span>
-<span class="window-key">created:</span>  <span class="window-string">"2026-06-10T11:20"</span>
-<span class="window-key">updated:</span>  <span class="window-string">"2026-06-20T09:15"</span>
+<span class="window-key">created:</span>  <span class="window-string">"2026-06-10T11:20:00"</span>
+<span class="window-key">updated:</span>  <span class="window-string">"2026-06-20T09:15:00"</span>
 <span class="window-muted">---</span>
 &nbsp;
 <span class="window-muted">&lt;!-- compiled_truth --&gt;</span>
@@ -387,7 +390,7 @@
 <span class="window-strong">clients. See [[api-versioning]].</span>
 &nbsp;
 <span class="window-section">## Timeline</span>
-<span class="window-muted">- time: 2026-06-20T09:15</span>
+<span class="window-muted">- time: 2026-06-20T09:15:00</span>
 <span class="window-muted">  kind: reversal</span>
 <span class="window-muted">  summary: Dropped OAuth — scope creep</span>
 <span class="window-muted">  source: internal-review-2026-06</span>
@@ -406,13 +409,13 @@
     <div class="feat-card">
       <div class="feat-card-media">
         <span class="dim"># 无服务，无 MCP 服务器</span><br>
-        <span class="dim"># 无需 npm install</span><br>
+        <span class="dim"># 零运行时依赖</span><br>
         <br>
-        <span class="prompt">$</span> <span class="hi">node brain.mjs ls</span><br>
-        <span class="dim">运行在普通 Node 上，零依赖</span>
+        <span class="prompt">$</span> <span class="hi">npm i -g @mindmux/brain-md</span><br>
+        <span class="dim">精简 CLI — 纯 Node，无依赖</span>
       </div>
       <div class="feat-card-title">零依赖</div>
-      <div class="feat-card-desc">不需要 npm install，不需要运行时服务，也没有后台守护进程。一个用 <code class="inline">node</code> 运行的零依赖参考 CLI。项目大脑随仓库一起交付。</div>
+      <div class="feat-card-desc">通过 npm 安装一次。<code class="inline">brain</code> CLI 零运行时依赖——无需服务、无需 MCP 服务器、无需守护进程。项目大脑本身就是仓库里的普通 Markdown。</div>
     </div>
 
     <div class="feat-card">
@@ -464,14 +467,14 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="hi">Claude Code</span> · <span class="hi">Codex</span><br>
-        任何能读取文件的代理<br>
+        <span class="hi">Claude</span> · <span class="hi">Codex</span> · <span class="hi">Cursor</span><br>
+        <span class="hi">Pi</span> · <span class="hi">OpenCode</span><br>
         <br>
         <span class="dim">4 个可安装技能，</span><br>
         <span class="dim">跨代理共享</span>
       </div>
       <div class="feat-card-title">代理无关</div>
-      <div class="feat-card-desc">中立命名的开放标准。四个技能安装一次，即可服务 Claude Code、Codex 和任何能读文件的代理。没有厂商锁定。</div>
+      <div class="feat-card-desc">中立命名的开放标准。四个技能安装一次，即可接入 Claude Code、Codex、Cursor、Pi、OpenCode——任何能读文件的代理都可通过 <code class="inline">BRAIN.md</code> 使用项目大脑。没有厂商锁定。</div>
     </div>
 
   </div>
@@ -481,30 +484,46 @@
 <!-- ── Get Started ── -->
 <section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
   <h2 class="section-heading" id="get-started-heading">开始使用</h2>
-  <div class="ui-window ui-window--terminal">
-    <div class="ui-window__titlebar">
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__title">快速开始</span>
+  <p class="cta-lead">安装一次、初始化项目，然后继续写代码。Agent 会读 <code class="inline">BRAIN.md</code>，并通过 <code class="inline">brain</code> CLI 读写项目大脑——你不需要手改这些文件。</p>
+
+  <div class="cta-stack">
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">1 · 安装并初始化</span>
+      </div>
+      <div class="ui-window__body command-body"><span class="window-muted"># 每台机器装一次 — 无需克隆仓库</span>
+<span class="window-key">npm install -g</span> @mindmux/brain-md
+<span class="window-key">brain setup</span> -y
+<span class="window-muted">→ 技能装入 Claude Code、Codex、Cursor、Pi、OpenCode</span>
+
+<span class="window-muted"># 每个项目做一次（在项目根目录）</span>
+<span class="window-key">brain init</span>
+<span class="window-muted">→ BRAIN.md + 空 brain/ + 接入 CLAUDE.md / AGENTS.md</span>
+
+<span class="window-muted"># 不想全局安装？两步都用 npx（PATH 上没有裸 brain）：</span>
+<span class="window-muted"># npx @mindmux/brain-md setup -y</span>
+<span class="window-muted"># npx @mindmux/brain-md init</span></div>
     </div>
-    <div class="ui-window__body command-body"><span class="window-muted"># 1. 克隆并全局安装一次</span>
-<span class="window-key">git clone</span> https://github.com/mindmuxai/brain.md
-<span class="window-key">cd</span> brain.md &amp;&amp; <span class="window-key">./setup</span>
-<span class="window-muted">→ 已安装 4 个技能到 ~/.claude/skills</span>
 
-<span class="window-muted"># 2. 在任意项目中搭建并播种</span>
-<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># 创建 BRAIN.md + brain/，接入 agent 配置</span>
-<span class="window-muted">/</span><span class="window-key">brain-bootstrap</span>  <span class="window-muted"># 从代码和 git log 播种知识</span>
-
-<span class="window-muted"># 3. 接入 brain CLI</span>
-brain() { node skills/brain-page/bin/brain.mjs <span class="window-string">"$@"</span>; }
-
-<span class="window-muted"># 4. 只通过 CLI 读写</span>
-brain <span class="window-string">list-pages</span>
-brain <span class="window-string">read-page</span> db-choice
-brain <span class="window-string">update-truth</span> --id db-choice --summary <span class="window-string">"为什么改变了"</span>
-brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="window-string">lint-links</span></div>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">2 · 和 agent 一起工作</span>
+      </div>
+      <div class="ui-window__body">
+        <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> 给这个项目播种 brain</div>
+        <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>运行 <code class="terminal-code">brain-bootstrap</code> 技能 — 不是 shell 命令。<br>&nbsp;&nbsp;已有仓库 → 从代码 / 文档 / <code class="terminal-code">git log</code> 起草<br>&nbsp;&nbsp;空项目 → 通过访谈收集<br><br><span class="terminal-code">$ brain update-root architecture</span><br><span class="terminal-code">$ brain create-page --id config-as-markdown --category decision …</span><br>✓ 根页面与关键决策已写入</span></div>
+        <div class="terminal-line terminal-line--dim">— 几周后，全新会话 —</div>
+        <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> 配置为什么不用数据库？</div>
+        <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span><span class="terminal-code">$ brain read-page config-as-markdown</span><br>我们选了 Markdown，方便 diff、零迁移。这是当初的决定和权衡…</span></div>
+        <div class="terminal-line terminal-line--dim">写代码时 agent 会在任务开始时加载 brain，决策落地后立刻写入 — 全程走 CLI。</div>
+      </div>
+    </div>
   </div>
 
   <p class="cta-docs"><a href="https://github.com/mindmuxai/brain.md" target="_blank" rel="noopener">查看完整文档 →</a></p>
@@ -543,7 +562,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
     <details class="faq-item">
       <summary class="faq-q">目前支持哪些 Agent 平台？</summary>
       <p class="faq-a">
-        目前已支持 Claude Code 和 Codex，更多平台正在陆续开发中。
+        技能可安装到 Claude Code、Codex、Cursor、Pi 和 OpenCode。任何能读取文件的代理都可以通过 <code class="inline">BRAIN.md</code> 使用项目大脑。
       </p>
     </details>
   </div>
@@ -558,6 +577,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
   </div>
   <div class="footer-right">
     <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.npmjs.com/package/@mindmux/brain-md" class="footer-link" target="_blank" rel="noopener">npm</a>
     <a href="https://github.com/mindmuxai/brain.md/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">Apache-2.0</a>
     <nav class="language-switcher language-switcher-footer" aria-label="语言">
       <a href="/">EN</a>
