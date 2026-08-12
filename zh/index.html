@@ -408,11 +408,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim"># 无服务，无 MCP 服务器</span><br>
-        <span class="dim"># 零运行时依赖</span><br>
-        <br>
-        <span class="prompt">$</span> <span class="hi">npm i -g @mindmux/brain-md</span><br>
-        <span class="dim">精简 CLI — 纯 Node，无依赖</span>
+        <div class="feat-card-media__body">
+          <span class="dim"># 无服务，无 MCP 服务器</span><br>
+          <span class="dim"># 零运行时依赖</span><br>
+          <br>
+          <span class="prompt">$</span> <span class="hi">npm i -g @mindmux/brain-md</span><br>
+          <span class="dim">精简 CLI — 纯 Node，无依赖</span>
+        </div>
       </div>
       <div class="feat-card-title">零依赖</div>
       <div class="feat-card-desc">通过 npm 安装一次。<code class="inline">brain</code> CLI 零运行时依赖——无需服务、无需 MCP 服务器、无需守护进程。项目大脑本身就是仓库里的普通 Markdown。</div>
@@ -420,10 +422,12 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="prompt">$</span> <span class="hi">brain update-truth --id db-choice</span><br>
-        <span class="dim">↳ 重写 compiled_truth</span><br>
-        <span class="dim">↳ 追加 timeline 条目</span><br>
-        <span class="dim">  在一次原子写入中完成</span>
+        <div class="feat-card-media__body">
+          <span class="prompt">$</span> <span class="hi">brain update-truth --id db-choice</span><br>
+          <span class="dim">↳ 重写 compiled_truth</span><br>
+          <span class="dim">↳ 追加 timeline 条目</span><br>
+          <span class="dim">  在一次原子写入中完成</span>
+        </div>
       </div>
       <div class="feat-card-title">结构保证正确</div>
       <div class="feat-card-desc">每次读写都通过 <code class="inline">brain</code> CLI。格式错误的 frontmatter 和无追踪记录的 truth 重写在结构上不可发生——根本不需要跑验证器。</div>
@@ -431,11 +435,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim">$ git log --oneline brain/</span><br>
-        <span class="hi">a3f1c4b</span> decision: chose postgres<br>
-        <span class="hi">8d22e01</span> reversal: dropped redis<br>
-        <span class="hi">f90b3aa</span> evidence: p99 spike<br>
-        <span class="dim">…</span>
+        <div class="feat-card-media__body">
+          <span class="dim">$ git log --oneline brain/</span><br>
+          <span class="hi">a3f1c4b</span> decision: chose postgres<br>
+          <span class="hi">8d22e01</span> reversal: dropped redis<br>
+          <span class="hi">f90b3aa</span> evidence: p99 spike<br>
+          <span class="dim">…</span>
+        </div>
       </div>
       <div class="feat-card-title">Git 原生</div>
       <div class="feat-card-desc">Brain 文件由 git 跟踪。timeline 提供人类可读的来源记录，git diff 提供完整变更历史。</div>
@@ -443,11 +449,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim"># architecture.md 引用：</span><br>
-        <span class="hi">[[db-choice]]</span><br>
-        <span class="hi">[[auth-strategy]]</span><br>
-        <br>
-        <span class="dim">$ brain lint-links ✓</span>
+        <div class="feat-card-media__body">
+          <span class="dim"># architecture.md 引用：</span><br>
+          <span class="hi">[[db-choice]]</span><br>
+          <span class="hi">[[auth-strategy]]</span><br>
+          <br>
+          <span class="dim">$ brain lint-links ✓</span>
+        </div>
       </div>
       <div class="feat-card-title">Wiki 链接交叉引用</div>
       <div class="feat-card-desc">页面使用 <code class="inline">[[page-id]]</code> 语法互相链接。ID 与 frontmatter 完全匹配，<code class="inline">lint-links</code> 会确认每个引用都能解析。</div>
@@ -455,11 +463,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="dim">&lt;!-- compiled_truth --&gt;</span><br>
-        <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
-        <span class="dim">不是原始笔记堆砌</span><br>
-        <span class="dim">不是向量索引</span><br>
-        <span class="hi">只存权威决策</span>
+        <div class="feat-card-media__body">
+          <span class="dim">&lt;!-- compiled_truth --&gt;</span><br>
+          <span class="hi">Use PostgreSQL. ✓ reviewed</span><br>
+          <span class="dim">不是原始笔记堆砌</span><br>
+          <span class="dim">不是向量索引</span><br>
+          <span class="hi">只存权威决策</span>
+        </div>
       </div>
       <div class="feat-card-title">决策级知识</div>
       <div class="feat-card-desc">存储经过审查、足够权威、可以指导代码生成的结论；不是记忆倾倒，也不是观察日志。</div>
@@ -467,11 +477,13 @@
 
     <div class="feat-card">
       <div class="feat-card-media">
-        <span class="hi">Claude</span> · <span class="hi">Codex</span> · <span class="hi">Cursor</span><br>
-        <span class="hi">Pi</span> · <span class="hi">OpenCode</span><br>
-        <br>
-        <span class="dim">4 个可安装技能，</span><br>
-        <span class="dim">跨代理共享</span>
+        <div class="feat-card-media__body">
+          <span class="hi">Claude Code</span> · <span class="hi">Codex</span> · <span class="hi">Cursor</span><br>
+          <span class="hi">Pi</span> · <span class="hi">OpenCode</span><br>
+          <br>
+          <span class="dim">4 个可安装技能，</span><br>
+          <span class="dim">跨代理共享</span>
+        </div>
       </div>
       <div class="feat-card-title">代理无关</div>
       <div class="feat-card-desc">中立命名的开放标准。四个技能安装一次，即可接入 Claude Code、Codex、Cursor、Pi、OpenCode——任何能读文件的代理都可通过 <code class="inline">BRAIN.md</code> 使用项目大脑。没有厂商锁定。</div>
