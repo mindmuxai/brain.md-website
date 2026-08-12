@@ -861,16 +861,18 @@ code.inline {
 .faq-q::-webkit-details-marker { display: none; }
 
 .faq-q::after {
-  content: '+';
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--muted);
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
   flex-shrink: 0;
+  transform: rotate(45deg);
   transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .faq-item[open] > .faq-q::after {
-  transform: rotate(45deg);
+  transform: rotate(225deg);
 }
 
 .faq-a {
