@@ -516,10 +516,13 @@
 <span class="window-muted"># once per project (from the project root)</span>
 <span class="window-key">brain init</span>
 <span class="window-muted">→ BRAIN.md + empty brain/ + wires CLAUDE.md / AGENTS.md</span>
+<span class="window-key">brain install-hooks</span>
+<span class="window-muted">→ optional: Claude Code SessionStart injects brain list-pages (project-local)</span>
 
-<span class="window-muted"># prefer npx? use it for both steps (no bare `brain` on PATH):</span>
+<span class="window-muted"># prefer npx? use it for each step (no bare `brain` on PATH):</span>
 <span class="window-muted"># npx @mindmux/brain-md setup -y</span>
-<span class="window-muted"># npx @mindmux/brain-md init</span></div>
+<span class="window-muted"># npx @mindmux/brain-md init</span>
+<span class="window-muted"># npx @mindmux/brain-md install-hooks</span></div>
     </div>
 
     <div class="ui-window ui-window--terminal">
@@ -577,6 +580,12 @@
       <summary class="faq-q">Which agent platforms are supported?</summary>
       <p class="faq-a">
         Skills install into Claude Code, Codex, Cursor, Pi, and OpenCode. Any agent that can read files can use the brain via <code class="inline">BRAIN.md</code>.
+      </p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Does setup or init install the Claude Code SessionStart hook?</summary>
+      <p class="faq-a">
+        No. <code class="inline">brain setup</code> and <code class="inline">brain init</code> do not write <code class="inline">.claude/settings.json</code>. After init, optionally run <code class="inline">brain install-hooks</code> in the project root. That is project-local only: a SessionStart hook injects a compact <code class="inline">brain list-pages</code> snapshot. Reverse with <code class="inline">brain uninstall-hooks</code>.
       </p>
     </details>
   </div>
