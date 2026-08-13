@@ -514,10 +514,13 @@
 <span class="window-muted"># 每个项目做一次（在项目根目录）</span>
 <span class="window-key">brain init</span>
 <span class="window-muted">→ BRAIN.md + 空 brain/ + 接入 CLAUDE.md / AGENTS.md</span>
+<span class="window-key">brain install-hooks</span>
+<span class="window-muted">→ 可选：Claude Code SessionStart 注入 brain list-pages（仅项目内）</span>
 
-<span class="window-muted"># 不想全局安装？两步都用 npx（PATH 上没有裸 brain）：</span>
+<span class="window-muted"># 不想全局安装？每一步都用 npx（PATH 上没有裸 brain）：</span>
 <span class="window-muted"># npx @mindmux/brain-md setup -y</span>
-<span class="window-muted"># npx @mindmux/brain-md init</span></div>
+<span class="window-muted"># npx @mindmux/brain-md init</span>
+<span class="window-muted"># npx @mindmux/brain-md install-hooks</span></div>
     </div>
 
     <div class="ui-window ui-window--terminal">
@@ -575,6 +578,12 @@
       <summary class="faq-q">目前支持哪些 Agent 平台？</summary>
       <p class="faq-a">
         技能可安装到 Claude Code、Codex、Cursor、Pi 和 OpenCode。任何能读取文件的代理都可以通过 <code class="inline">BRAIN.md</code> 使用项目大脑。
+      </p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">setup 或 init 会装上 Claude Code 的 SessionStart hook 吗？</summary>
+      <p class="faq-a">
+        不会。<code class="inline">brain setup</code> 和 <code class="inline">brain init</code> 都不会写入 <code class="inline">.claude/settings.json</code>。init 之后可在项目根目录可选执行 <code class="inline">brain install-hooks</code>，仅作用于当前项目：SessionStart 时注入一份精简的 <code class="inline">brain list-pages</code>。撤销用 <code class="inline">brain uninstall-hooks</code>。
       </p>
     </details>
   </div>
