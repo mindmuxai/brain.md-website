@@ -44,7 +44,10 @@
     "name": "BRAIN.md",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
-    "downloadUrl": "https://github.com/mindmuxai/brain.md",
+    "softwareVersion": "0.1.0",
+    "downloadUrl": "https://www.npmjs.com/package/@mindmux/brain-md",
+    "installUrl": "https://www.npmjs.com/package/@mindmux/brain-md",
+    "codeRepository": "https://github.com/mindmuxai/brain.md",
     "featureList": "Zero dependencies, Git-native, Correct by construction, Wiki-Link Cross-References, Agent-Agnostic",
     "releaseNotes": "https://github.com/mindmuxai/brain.md/releases",
     "offers": {
@@ -121,7 +124,7 @@
         "name": "Which agent platforms are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Claude Code and Codex are supported today. More platforms are on the way."
+          "text": "Skills install into Claude Code, Codex, Cursor, Pi, and OpenCode. Any agent that can read files can use the brain via BRAIN.md."
         }
       }
     ]
@@ -377,8 +380,8 @@
 <span class="window-key">title:</span>    <span class="window-string">Authentication Strategy</span>
 <span class="window-key">category:</span> <span class="window-string">decision</span>
 <span class="window-key">status:</span>   <span class="window-string">active</span>
-<span class="window-key">created:</span>  <span class="window-string">"2026-06-10T11:20"</span>
-<span class="window-key">updated:</span>  <span class="window-string">"2026-06-20T09:15"</span>
+<span class="window-key">created:</span>  <span class="window-string">"2026-06-10T11:20:00"</span>
+<span class="window-key">updated:</span>  <span class="window-string">"2026-06-20T09:15:00"</span>
 <span class="window-muted">---</span>
 &nbsp;
 <span class="window-muted">&lt;!-- compiled_truth --&gt;</span>
@@ -389,7 +392,7 @@
 <span class="window-strong">clients. See [[api-versioning]].</span>
 &nbsp;
 <span class="window-section">## Timeline</span>
-<span class="window-muted">- time: 2026-06-20T09:15</span>
+<span class="window-muted">- time: 2026-06-20T09:15:00</span>
 <span class="window-muted">  kind: reversal</span>
 <span class="window-muted">  summary: Dropped OAuth — scope creep</span>
 <span class="window-muted">  source: internal-review-2026-06</span>
@@ -409,14 +412,14 @@
       <div class="feat-card-media">
         <div class="feat-card-media__body">
           <span class="dim"># no service, no MCP server</span><br>
-          <span class="dim"># no npm install</span><br>
+          <span class="dim"># zero runtime deps</span><br>
           <br>
-          <span class="prompt">$</span> <span class="hi">node brain.mjs ls</span><br>
-          <span class="dim">runs on plain Node — zero deps</span>
+          <span class="prompt">$</span> <span class="hi">npm i -g @mindmux/brain-md</span><br>
+          <span class="dim">lean CLI — plain Node, no deps</span>
         </div>
       </div>
       <div class="feat-card-title">Zero Dependencies</div>
-      <div class="feat-card-desc">No npm install, no runtime service, no background daemon. One zero-dependency reference CLI, run with <code class="inline">node</code>. The brain ships in your repo.</div>
+      <div class="feat-card-desc">Install once from npm. The <code class="inline">brain</code> CLI has zero runtime dependencies — no service, no MCP server, no daemon. The brain itself is plain Markdown in your repo.</div>
     </div>
 
     <div class="feat-card">
@@ -477,15 +480,15 @@
     <div class="feat-card">
       <div class="feat-card-media">
         <div class="feat-card-media__body">
-          <span class="hi">Claude Code</span> · <span class="hi">Codex</span><br>
-          any agent that reads files<br>
+          <span class="hi">Claude Code</span> · <span class="hi">Codex</span> · <span class="hi">Cursor</span><br>
+          <span class="hi">Pi</span> · <span class="hi">OpenCode</span><br>
           <br>
           <span class="dim">4 installable skills,</span><br>
           <span class="dim">shared across agents</span>
         </div>
       </div>
       <div class="feat-card-title">Agent-Agnostic</div>
-      <div class="feat-card-desc">An open standard with neutral naming. Four skills install once and work with Claude Code, Codex, and any file-reading agent. No vendor lock-in.</div>
+      <div class="feat-card-desc">An open standard with neutral naming. Four skills install once into Claude Code, Codex, Cursor, Pi, OpenCode — and any file-reading agent can use the brain via <code class="inline">BRAIN.md</code>. No vendor lock-in.</div>
     </div>
 
   </div>
@@ -495,30 +498,46 @@
 <!-- ── Get Started ── -->
 <section class="cta-wrap" id="get-started" aria-labelledby="get-started-heading">
   <h2 class="section-heading" id="get-started-heading">Get Started</h2>
-  <div class="ui-window ui-window--terminal">
-    <div class="ui-window__titlebar">
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__dot"></span>
-      <span class="ui-window__title">Quick start</span>
+  <p class="cta-lead">Install once, init a project — then keep coding. Your agent reads <code class="inline">BRAIN.md</code>, and every brain write goes through the <code class="inline">brain</code> CLI. You don't maintain the files by hand.</p>
+
+  <div class="cta-stack">
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">1 · Install &amp; init</span>
+      </div>
+      <div class="ui-window__body command-body"><span class="window-muted"># once per machine — no clone required</span>
+<span class="window-key">npm install -g</span> @mindmux/brain-md
+<span class="window-key">brain setup</span> -y
+<span class="window-muted">→ skills install into Claude Code, Codex, Cursor, Pi, OpenCode</span>
+
+<span class="window-muted"># once per project (from the project root)</span>
+<span class="window-key">brain init</span>
+<span class="window-muted">→ BRAIN.md + empty brain/ + wires CLAUDE.md / AGENTS.md</span>
+
+<span class="window-muted"># prefer npx? use it for both steps (no bare `brain` on PATH):</span>
+<span class="window-muted"># npx @mindmux/brain-md setup -y</span>
+<span class="window-muted"># npx @mindmux/brain-md init</span></div>
     </div>
-    <div class="ui-window__body command-body"><span class="window-muted"># 1. clone &amp; install once (global)</span>
-<span class="window-key">git clone</span> https://github.com/mindmuxai/brain.md
-<span class="window-key">cd</span> brain.md &amp;&amp; <span class="window-key">./setup</span>
-<span class="window-muted">→ installed 4 skills into ~/.claude/skills</span>
 
-<span class="window-muted"># 2. scaffold + seed in any project</span>
-<span class="window-muted">/</span><span class="window-key">brain-setup</span>      <span class="window-muted"># creates BRAIN.md + brain/, wires agent configs</span>
-<span class="window-muted">/</span><span class="window-key">brain-bootstrap</span>  <span class="window-muted"># seeds from code + git log</span>
-
-<span class="window-muted"># 3. wire the brain CLI</span>
-brain() { node skills/brain-page/bin/brain.mjs <span class="window-string">"$@"</span>; }
-
-<span class="window-muted"># 4. read &amp; write through the CLI</span>
-brain <span class="window-string">list-pages</span>
-brain <span class="window-string">read-page</span> db-choice
-brain <span class="window-string">update-truth</span> --id db-choice --summary <span class="window-string">"why it changed"</span>
-brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="window-string">lint-links</span></div>
+    <div class="ui-window ui-window--terminal">
+      <div class="ui-window__titlebar">
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__dot"></span>
+        <span class="ui-window__title">2 · Work with your agent</span>
+      </div>
+      <div class="ui-window__body">
+        <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> Seed this project's brain</div>
+        <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span>Running the <code class="terminal-code">brain-bootstrap</code> skill — not a shell command.<br>&nbsp;&nbsp;Existing repo → drafts from code / docs / <code class="terminal-code">git log</code><br>&nbsp;&nbsp;Empty project → interviews you<br><br><span class="terminal-code">$ brain update-root architecture</span><br><span class="terminal-code">$ brain create-page --id config-as-markdown --category decision …</span><br>✓ root pages + key decisions seeded</span></div>
+        <div class="terminal-line terminal-line--dim">— weeks later, a fresh session —</div>
+        <div class="terminal-line terminal-line--user"><span class="terminal-prompt">❯</span> Why aren't we using a database for config?</div>
+        <div class="terminal-line terminal-line--ai"><span class="terminal-sigil">✦</span> <span><span class="terminal-code">$ brain read-page config-as-markdown</span><br>We chose Markdown for diff-ability and zero migrations. Here's the original call and the trade-offs we weighed…</span></div>
+        <div class="terminal-line terminal-line--dim">While you code, the agent loads the brain at task start and captures decisions as they settle — all via the CLI.</div>
+      </div>
+    </div>
   </div>
 
   <p class="cta-docs"><a href="https://github.com/mindmuxai/brain.md" target="_blank" rel="noopener">View full documentation →</a></p>
@@ -557,7 +576,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
     <details class="faq-item">
       <summary class="faq-q">Which agent platforms are supported?</summary>
       <p class="faq-a">
-        Claude Code and Codex are supported today. More platforms are on the way.
+        Skills install into Claude Code, Codex, Cursor, Pi, and OpenCode. Any agent that can read files can use the brain via <code class="inline">BRAIN.md</code>.
       </p>
     </details>
   </div>
@@ -572,6 +591,7 @@ brain <span class="window-string">reindex</span> &amp;&amp; brain <span class="w
   </div>
   <div class="footer-right">
     <a href="https://github.com/mindmuxai/brain.md" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.npmjs.com/package/@mindmux/brain-md" class="footer-link" target="_blank" rel="noopener">npm</a>
     <a href="https://github.com/mindmuxai/brain.md/blob/main/LICENSE" class="footer-link" target="_blank" rel="noopener">Apache-2.0</a>
     <nav class="language-switcher language-switcher-footer" aria-label="Language">
       <a href="/" aria-current="page">EN</a>
